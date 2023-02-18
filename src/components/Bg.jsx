@@ -25,19 +25,31 @@ const Bg = ( { theme } )=> {
     });
   };
 
+  const handleMotion = (event) => {
+    setPosition({
+      x: (event.accelerationIncludingGravity.x + 10) * 5,
+      y: (event.accelerationIncludingGravity.y + 10) * 5,
+    });
+  };
+
   useEffect(() => {
-    if (window.innerWidth > 700) {
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-          window.removeEventListener("mousemove", handleMouseMove);
-        };
-      } else {
-        window.addEventListener("deviceorientation", handleOrientation);
-        return () => {
-          window.removeEventListener("deviceorientation", handleOrientation);
-        };
-      }
-    }, []);
+  if (window.innerWidth > 700) {
+      window.addEventListener("mousemove", handleMouseMove);
+      return () => {
+        window.removeEventListener("mousemove", handleMouseMove);
+      };
+    } else if (window.DeviceMotionEvent) {
+      window.addEventListener("devicemotion", handleMotion);
+      return () => {
+        window.removeEventListener("devicemotion", handleMotion);
+      };
+    } else {
+      window.addEventListener("deviceorientation", handleOrientation);
+      return () => {
+        window.removeEventListener("deviceorientation", handleOrientation);
+      };
+    }
+  }, []);
 
     let x = 0;
     let y = 0;
