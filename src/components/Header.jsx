@@ -11,6 +11,8 @@ import { HiSun } from 'react-icons/hi'
 
 const Header = ({ onThemeChange, theme }) => {
 
+    
+
     const [isScrolled, setIsScrolled] = useState(false);
 
     useEffect(() => {
@@ -50,7 +52,15 @@ const Header = ({ onThemeChange, theme }) => {
                     <ul className='nav'>
                         <li><Link to='/deep-eye/'>INICIO</Link></li>
                         <li><Link to='/deep-eye/sobre/'>SOBRE</Link></li>
-                        <li>SECCIONES</li>
+                        <li className='secciones'>SECCIONES ▼ 
+                            <ul className='hidden-menu'>
+                                <li>Psicodélicos</li>
+                                <li>Meditación</li>
+                                <li>Respiración</li>
+                                <li>Sueños</li>
+                                <li>Arte</li>
+                            </ul>
+                        </li>
                         <li><Link to='/deep-eye/tienda/'>TIENDA</Link></li>
                     </ul>
                 </div>

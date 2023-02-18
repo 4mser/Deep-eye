@@ -11,13 +11,13 @@ import Home from './routes/Home';
 
 function App() {
 
-  const [theme, setTheme] = useState('light');
+  const [theme, setTheme] = useState('dark');
 
   const handleThemeChange = () => {
-    if (theme === 'light') {
-      setTheme('dark');
-    } else {
+    if (theme === 'dark') {
       setTheme('light');
+    } else {
+      setTheme('dark');
     }
   }
 

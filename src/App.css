@@ -91,8 +91,8 @@
 .header.scrolled {
   border-bottom: 1px solid var(--shadow);
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.168);
-  transition: 1s;backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
+  transition: 1s;backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);
 }
 
 
@@ -161,7 +161,7 @@
 .logo-dark img {
   width: 8rem;
   user-select: none;
-  filter: invert(1);
+  filter: invert(1) contrast(.7);
   transition: .2s;
 
 }
@@ -412,8 +412,36 @@
 
 }
 
-.header ul li:hover {
-  filter: drop-shadow(0 0 2px white);
+
+
+
+
+
+.hidden-menu {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  opacity: 0;
+  height: 0;
+  transform: translateX(-1rem);
+  overflow: hidden;
+  transition: .2s;
+}
+
+.hidden-menu li{
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 1rem 1rem;
+  border-top: 2px solid var(--secondary-color);
+}
+
+.secciones:hover .hidden-menu {
+  opacity: 1;
+  padding: .5rem 0;
+  height:max-content;
 }
 
 @media (max-width: 1000px) {
@@ -449,7 +477,6 @@
   position: absolute;
   width: 100%;
   height: 100vh;
-  top: 80vh;
   display: flex;
   justify-content: space-between;
   padding: 9rem;
@@ -490,7 +517,8 @@
 .about-home .about-img-light img {
   width: 100%;
   object-fit: cover;
-  filter: invert(1);
+  user-select: none;
+  filter: invert(1) ;
   transition: 1s;
 }
 
@@ -508,6 +536,8 @@
   width: 100%;
   object-fit: cover;
   transition: 1s;
+  filter: drop-shadow(0px 0px 10px rgb(255, 255, 255) inset);
+  user-select: none;
 }
 
 
@@ -545,6 +575,7 @@
     position: absolute;
     width: 100%;
     height: auto;
+    top: 15rem;
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -552,13 +583,13 @@
     align-items: center;
     padding: 2rem;
     overflow: hidden;
-    top: 100vh;
   }
   
   .about-home .about-text {
     width: 100%;
     height: auto;
     margin-bottom: 1rem;
+    margin-top: 5rem;
   }
   
   .about-text h2 {
@@ -579,10 +610,11 @@
   .about-home .about-img-light,
   .about-home .about-img-dark {
     position: relative;
-    width: 90%;
+    width: 70%;
     margin-top: 1rem;
     transition: .5s;
     overflow: hidden;
+    filter: contrast(.7);
   }
   
 }

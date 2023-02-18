@@ -51,7 +51,6 @@ const Title = ( ) => {
             transition: "transform 0.1s ease-out",
           }}>
             <h1 className="mensaje-bienvenida">Welcome</h1>
-            <div className="barra"></div>
           </section>
         </section>
     )

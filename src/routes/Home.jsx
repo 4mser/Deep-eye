@@ -4,7 +4,7 @@ import Title from "../components/Title"
 const Home = ({theme}) => {
     return (
         <section>
-            <Title></Title>
+            {/* <Title></Title> */}
             <AboutHome theme={theme}></AboutHome>
         </section>
     )

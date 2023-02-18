@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const AboutHome = ({theme}) => {
 
-    const sensitivity = window.innerWidth > 1000 ? { x: 30, y: 20 } : { x: 1000, y: 1000 };
+    const sensitivity = window.innerWidth > 10 ? { x: 30, y: 20 } : { x: 30, y: 20 };
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -46,6 +46,14 @@ const AboutHome = ({theme}) => {
 
     return (
         <section className="about-home">
+                <div className={theme=== 'dark' ? 'about-img-dark' : 'about-img-light'}
+                style={{
+                    transform: `translate(${-limitedX}%, ${-limitedY}%)`,
+                    transition: "transform .1s ease-out",
+                  }}>
+                    <img src="https://s3.amazonaws.com/skybar.database.teset.1/DeepEye-logo-png.png" alt="Deep-Eye-logo" border="0"/>
+                </div>
+                
                 <div className="about-text">
                     <h2>¿Qué es Deep Eye?</h2>
                     <p>Somos una plataforma dedicada a la investigación y reflexión sobre la mente humana y los estados no-ordinarios de conciencia.</p> <br />
@@ -53,17 +61,9 @@ const AboutHome = ({theme}) => {
                     <br />
                     <p>Además, buscamos promover el conocimiento y la información sobre el uso de sustancias psicoactivas, con el fin de reducir los riesgos asociados al uso indebido de estos compuestos e investigar sus usos terapéuticos y de desarrollo humano.</p>
                     <br />
-                    <button className="btn-about">QUIERO SABER MÁS!</button>
                 </div>
 
 
-                <div className={theme=== 'dark' ? 'about-img-dark' : 'about-img-light'}
-                style={{
-                    transform: `translate(${-limitedX}%, ${-limitedY}%)`,
-                    transition: "transform 1s ease-out",
-                  }}>
-                    <img src="https://s3.amazonaws.com/skybar.database.teset.1/DeepEye-logo-png.png" alt="Deep-Eye-logo" border="0"/>
-                </div>
         </section>
     )
 }
