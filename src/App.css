@@ -506,7 +506,7 @@
   object-fit: contain;
     user-select: none;
     transition: .5s;
-  filter: contrast(.8);
+  filter: opacity(.8);
 }
 
 .banner-light {
@@ -521,9 +521,9 @@
 .banner-light img {
   width: 100%;
   object-fit: contain;
-  filter: contrast(.8) invert(1);
+  filter: contrast(.8) invert(1) opacity(.9);
     user-select: none;
-    transition: 1s;
+  transition: 1s;
 }
 
 
@@ -549,20 +549,49 @@
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 6rem;
-  background: black;
+  backdrop-filter: hue-rotate(170deg) invert(1);
   position: fixed;
   margin-top: 5rem;
+  display: flex;
+  transition: 1s;
+  justify-content: center;
+  align-items: center;
 }
+
+.pupila-dark {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.186);
+  transition: 1s;
+  filter: brightness(2);
+}
+
+
 
 
 .banner-eye-light {
   width: 8rem;
   height: 8rem;
   border-radius: 50%;
-  margin-top: 5rem;
+  overflow: hidden;
   margin-bottom: 6rem;
-  background: rgb(255, 255, 255);
+  backdrop-filter: hue-rotate(170deg) invert(1);
   position: fixed;
+  margin-top: 5rem;
+  display: flex;
+  justify-content: center;
+  transition: 1s;
+  align-items: center;
+}
+
+.pupila-light {
+  width: 7rem;
+  height: 7rem;
+  border-radius: 50%;
+  background: rgba(37, 37, 37, 0.456);
+  filter: brightness(0);
+  transition: 1s;
 }
 
 
@@ -571,6 +600,11 @@
     width: 5rem;
     height: 5rem;
     overflow: hidden;
+  }
+
+  .pupila-light {
+    width: 5rem;
+    height: 5rem;
   }
 
   .banner-eye-dark {
