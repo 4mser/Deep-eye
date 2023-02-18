@@ -588,7 +588,6 @@
     width: 5rem;
     height: 5rem;
     overflow: hidden;
-    margin-top: 7rem;
   }
 
 
@@ -596,7 +595,6 @@
   .banner-eye-dark {
     width: 5rem;
     height: 5rem;
-    margin-top: 7rem;
     overflow: hidden;
   }
 }

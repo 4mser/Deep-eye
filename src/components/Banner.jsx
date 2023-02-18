@@ -124,7 +124,7 @@ const Banner = ({theme}) => {
   limitedX = Math.min(Math.max(x, -25), 25);
   limitedY = Math.min(Math.max(y, -25), 25); */
 
-  const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 20 } : { x: 10, y: 10 };
+  const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 20 } : { x: 2, y: 2 };
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
