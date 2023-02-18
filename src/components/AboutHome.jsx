@@ -14,26 +14,7 @@ const AboutHome = ({theme}) => {
     });
   };
 
-  const handleOrientation = (event) => {
-    setPosition({
-      x: (event.gamma + 90) * 5,
-      y: (event.beta + 90) * 5,
-    });
-  };
 
-  useEffect(() => {
-    if (window.innerWidth > 700) {
-        window.addEventListener("mousemove", handleMouseMove);
-        return () => {
-          window.removeEventListener("mousemove", handleMouseMove);
-        };
-      } else {
-        window.addEventListener("deviceorientation", handleOrientation);
-        return () => {
-          window.removeEventListener("deviceorientation", handleOrientation); 
-        };
-      }
-    }, []);
 
     let x = 0;
     let y = 0;
@@ -57,11 +38,7 @@ const AboutHome = ({theme}) => {
                 </div>
 
 
-                <div className={theme=== 'dark' ? 'about-img-dark' : 'about-img-light'}
-                style={{
-                    transform: `translate(${-limitedX}%, ${-limitedY}%)`,
-                    transition: "transform 1s ease-out",
-                  }}>
+                <div className={theme=== 'dark' ? 'about-img-dark' : 'about-img-light'}>
                     <img src="https://s3.amazonaws.com/skybar.database.teset.1/DeepEye-logo-png.png" alt="Deep-Eye-logo" border="0"/>
                 </div>
         </section>
