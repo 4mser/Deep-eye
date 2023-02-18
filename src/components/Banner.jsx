@@ -183,8 +183,8 @@ const Banner = ({theme}) => {
 
           <div className={theme === "dark" ? "banner-eye-dark" : "banner-eye-light"}
           style={{
-            transform: `translate(${limitedX}%, ${limitedY}%)`,
-            transition: "transform .3s ease-out",
+            transform: `translate(${window.innerWidth > 1000 ? limitedX : -limitedX}%, ${window.innerWidth > 1000 ? limitedY : -limitedY}%)`,
+            transition: "transform .1s ease-out",
           }}>
             {/* <div className={theme === "dark" ? "pupila-dark" : "pupila-light"}
             style={{
