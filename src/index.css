@@ -1,0 +1,44 @@
+:root {
+  font-family: Montserrat, Inter, Avenir, Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  box-sizing: border-box;
+  margin: none;
+  padding: none;
+
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --primary-color: white;
+  --secondary-color: #232323;
+  --blue: #00E5FF;
+
+
+  background-color: black;
+
+
+
+}
+
+.light {
+  --primary-color: white;
+  --secondary-color: #232323;
+  background-color: var(--secondary-color);
+}
+
+.dark {
+  --primary-color: #232323;
+  --secondary-color: white;
+  background-color: var(--secondary-color);
+
+}
+
+.header a{
+  text-decoration: none;
+  color: inherit;
+}
