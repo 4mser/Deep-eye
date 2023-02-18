@@ -76,7 +76,7 @@
   top: 0;
   width: 100%;
   position: fixed;
-  padding: 1rem 7rem ;
+  padding: 0 7rem ;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -127,6 +127,16 @@
 .logo-dark img:hover {
   transform: scale(1.07);
   cursor: pointer;
+}
+
+@media (max-width: 1000px) {
+  .logo-light  img:hover {
+    cursor: none;
+  } 
+  
+  .logo-dark img:hover {
+    cursor: none;
+  }
 }
 
 .logo-light,
@@ -213,6 +223,7 @@
 @media (max-width: 1000px)  {
   .menu-btn {
     display: block;
+    cursor: none;
   }
 
   .menu-btn:hover  {
@@ -395,6 +406,10 @@
 
 }
 
+.header ul li:hover {
+  filter: drop-shadow(0 0 2px white);
+}
+
 @media (max-width: 1000px) {
   .nav-container {
     position: fixed;
@@ -552,7 +567,9 @@
     line-height: normal;
   }
   
-  
+  .btn-about:hover {
+    cursor: none;
+  }
   .about-home .about-img-light,
   .about-home .about-img-dark {
     position: relative;
