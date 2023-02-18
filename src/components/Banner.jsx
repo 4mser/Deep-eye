@@ -81,7 +81,7 @@ const Banner = ({theme}) => {
     };
     const handleOrientation = (event) => {
       setPosition({
-        x: (event.gamma + 90) * 5,
+        x: (event.gamma + 90) * 3,
         y: (event.beta + 90) * 5,
       });
     };
@@ -110,16 +110,16 @@ const Banner = ({theme}) => {
 
   const sensitivity =
     window.innerWidth > 1000
-      ? { x: 200, y: 200 }
+      ? { x: 100, y: 100 }
       : orientation === "landscape-primary" || orientation === "landscape-secondary"
-      ? { x: 100, y: 50 }
+      ? { x: 10, y: 10 }
       : { x: 10, y: 10 };
   
   let x = 0;
   let y = 0;
   let limitedX = 0;
   let limitedY = 0;
-  x = (position.x - window.innerWidth / 1) / sensitivity.x;
+  x = (position.x - window.innerWidth / 2) / sensitivity.x;
   y = (position.y - window.innerHeight / 2) / sensitivity.y;
   limitedX = Math.min(Math.max(x, -25), 25);
   limitedY = Math.min(Math.max(y, -25), 25);
