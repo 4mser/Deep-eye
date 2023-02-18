@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 const AboutHome = ({theme}) => {
 
-    const sensitivity = window.innerWidth > 700 ? { x: 200, y: 20 } : { x: 10, y: 10 };
+    const sensitivity = window.innerWidth > 1000 ? { x: 30, y: 20 } : { x: 1000, y: 1000 };
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -14,7 +14,26 @@ const AboutHome = ({theme}) => {
     });
   };
 
+  const handleOrientation = (event) => {
+    setPosition({
+      x: (event.gamma + 90) * 5,
+      y: (event.beta + 90) * 5,
+    });
+  };
 
+  useEffect(() => {
+    if (window.innerWidth > 1000) {
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => {
+          window.removeEventListener("mousemove", handleMouseMove);
+        };
+      } else {
+        window.addEventListener("deviceorientation", handleOrientation);
+        return () => {
+          window.removeEventListener("deviceorientation", handleOrientation); 
+        };
+      }
+    }, []);
 
     let x = 0;
     let y = 0;
@@ -38,7 +57,11 @@ const AboutHome = ({theme}) => {
                 </div>
 
 
-                <div className={theme=== 'dark' ? 'about-img-dark' : 'about-img-light'}>
+                <div className={theme=== 'dark' ? 'about-img-dark' : 'about-img-light'}
+                style={{
+                    transform: `translate(${-limitedX}%, ${-limitedY}%)`,
+                    transition: "transform 1s ease-out",
+                  }}>
                     <img src="https://s3.amazonaws.com/skybar.database.teset.1/DeepEye-logo-png.png" alt="Deep-Eye-logo" border="0"/>
                 </div>
         </section>
