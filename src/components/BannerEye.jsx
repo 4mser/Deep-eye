@@ -43,7 +43,7 @@ const BannerEye = ({theme}) => {
 
   const sensitivity =
     window.innerWidth > 1000
-      ? { x: 100, y: 100 }
+      ? { x: 100, y: 10 }
       : orientation === "landscape-primary" || orientation === "landscape-secondary"
       ? { x: 10, y: 10 }
       : { x: 10, y: 10 };
