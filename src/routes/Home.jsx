@@ -1,11 +1,9 @@
-import AboutHome from "../components/AboutHome"
-import Title from "../components/Title"
+import Banner from "../components/Banner"
 
 const Home = ({theme}) => {
     return (
         <section>
-            {/* <Title></Title> */}
-            <AboutHome theme={theme}></AboutHome>
+            <Banner theme={theme}></Banner>
         </section>
     )
 }
