@@ -113,7 +113,7 @@ const Banner = ({theme}) => {
       ? { x: 200, y: 200 }
       : orientation === "landscape-primary" || orientation === "landscape-secondary"
       ? { x: 100, y: 50 }
-      : { x: 100, y: 100 };
+      : { x: 10, y: 10 };
   
   let x = 0;
   let y = 0;
