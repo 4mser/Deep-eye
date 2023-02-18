@@ -28,10 +28,16 @@
 .light {
   --primary-color: white;
   --secondary-color: #232323;
+
+  --shadow: rgba(255, 255, 255, 0.168);
+
   background-color: var(--secondary-color);
 }
 
 .dark {
+
+  --shadow: rgba(0, 0, 0, 0.168);
+
   --primary-color: #232323;
   --secondary-color: white;
   background-color: var(--secondary-color);

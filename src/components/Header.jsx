@@ -10,6 +10,22 @@ import { HiSun } from 'react-icons/hi'
 
 
 const Header = ({ onThemeChange, theme }) => {
+
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+          if (window.scrollY > 0) {
+            setIsScrolled(true);
+          } else {
+            setIsScrolled(false);
+          }
+        };
+      
+        window.addEventListener('scroll', handleScroll);
+      
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
     
 
     const [isOpen, setIsOpen] = useState(false);
@@ -21,7 +37,7 @@ const Header = ({ onThemeChange, theme }) => {
 
     return (
         <section>
-            <header className='header'>
+            <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
                 
                 <Link to='/deep-eye/'>
                     <div className={theme=== 'dark' ? 'logo-dark' : 'logo-light'}>
