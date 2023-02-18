@@ -113,13 +113,13 @@ const Banner = ({theme}) => {
       ? { x: 200, y: 200 }
       : orientation === "landscape-primary" || orientation === "landscape-secondary"
       ? { x: 100, y: 50 }
-      : { x: 50, y: 100 };
+      : { x: 100, y: 100 };
   
   let x = 0;
   let y = 0;
   let limitedX = 0;
   let limitedY = 0;
-  x = (position.x - window.innerWidth / 2) / sensitivity.x;
+  x = (position.x - window.innerWidth / 1) / sensitivity.x;
   y = (position.y - window.innerHeight / 2) / sensitivity.y;
   limitedX = Math.min(Math.max(x, -25), 25);
   limitedY = Math.min(Math.max(y, -25), 25);
