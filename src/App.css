@@ -553,6 +553,7 @@
   margin-bottom: 6rem;
   /* margin: 0 2rem 3rem 0; */
   backdrop-filter: hue-rotate(170deg) invert(1);
+  -webkit-backdrop-filter: hue-rotate(170deg) invert(1);
   position: fixed;
   margin-top: 5rem;
   display: flex;
@@ -571,6 +572,7 @@
   overflow: hidden;
   margin-bottom: 6rem;
   backdrop-filter: hue-rotate(170deg) invert(1);
+  -webkit-backdrop-filter: hue-rotate(170deg) invert(1);
   position: fixed;
   margin-top: 5rem;
   display: flex;
