@@ -53,7 +53,7 @@ const Banner = ({theme}) => {
                     transform: `translate(${-limitedX}%, ${-limitedY}%)`,
                     transition: "transform .1s ease-out",
                 }}>
-                    <img src="\src\assets\images\imgBanner-02.png" alt="Deep-Eye-logo" border="0"/>
+                    <img src="https://s3.amazonaws.com/skybar.database.teset.1/imgBanner-02.png" alt="Deep-Eye-logo" border="0"/>
 
                 </div>          
 
