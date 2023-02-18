@@ -129,10 +129,10 @@ const Banner = ({theme}) => {
       <section className="banner-container">
         <div
           className={theme === "dark" ? "banner-dark" : "banner-light"}
-          style={{
+          /* style={{
             transform: `translate(${-limitedX}%, ${-limitedY}%)`,
             transition: "transform 1s ease-out",
-          }}
+          }} */
         >
           <img
             src="https://s3.amazonaws.com/skybar.database.teset.1/imgBanner-02.png"
@@ -145,11 +145,11 @@ const Banner = ({theme}) => {
             transform: `translate(${limitedX}%, ${limitedY}%)`,
             transition: "transform .3s ease-out",
           }}>
-            <div className={theme === "dark" ? "pupila-dark" : "pupila-light"}
+            {/* <div className={theme === "dark" ? "pupila-dark" : "pupila-light"}
             style={{
               transform: `translate(${limitedX}%, ${limitedY}%)`,
               transition: "transform .1s ease-out",
-            }}></div>
+            }}></div> */}
           </div>
         </div>
       </section>
