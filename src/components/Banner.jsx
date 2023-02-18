@@ -81,8 +81,8 @@ const Banner = ({theme}) => {
     };
     const handleOrientation = (event) => {
       setPosition({
-        x: (event.gamma + 90) * 3,
-        y: (event.beta + 90) * 3,
+        x: (event.gamma + 90) * 1,
+        y: (event.beta + 90) * 1,
       });
     };
     if (window.innerWidth > 1000) {
@@ -110,7 +110,7 @@ const Banner = ({theme}) => {
 
   const sensitivity =
     window.innerWidth > 1000
-      ? { x: 100, y: 200 }
+      ? { x: 10, y: 20 }
       : orientation === "landscape-primary" || orientation === "landscape-secondary"
       ? { x: 10, y: 10 }
       : { x: 10, y: 10 };

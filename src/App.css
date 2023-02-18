@@ -551,6 +551,7 @@
   border-radius: 50%;
   overflow: hidden;
   margin-bottom: 6rem;
+  /* margin: 0 2rem 3rem 0; */
   backdrop-filter: hue-rotate(170deg) invert(1);
   position: fixed;
   margin-top: 5rem;
@@ -558,15 +559,6 @@
   transition: 1s;
   justify-content: center;
   align-items: center;
-}
-
-.pupila-dark {
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.186);
-  transition: 1s;
-  filter: brightness(2);
 }
 
 
@@ -587,14 +579,6 @@
   align-items: center;
 }
 
-.pupila-light {
-  width: 7rem;
-  height: 7rem;
-  border-radius: 50%;
-  filter: brightness(0);
-  transition: 1s;
-  mix-blend-mode: difference;
-}
 
 
 @media (max-width: 1000px) {
@@ -602,16 +586,15 @@
     width: 5rem;
     height: 5rem;
     overflow: hidden;
+    margin-top: 7rem;
   }
 
-  .pupila-light {
-    width: 4rem;
-    height: 4rem;
-  }
+
 
   .banner-eye-dark {
     width: 5rem;
     height: 5rem;
+    margin-top: 7rem;
     overflow: hidden;
   }
 }
