@@ -131,7 +131,7 @@ const Banner = ({theme}) => {
           className={theme === "dark" ? "banner-dark" : "banner-light"}
           style={{
             transform: `translate(${-limitedX}%, ${-limitedY}%)`,
-            transition: "transform .1s ease-out",
+            transition: "transform 1s ease-out",
           }}
         >
           <img
@@ -139,6 +139,12 @@ const Banner = ({theme}) => {
             alt="Deep-Eye-logo"
             border="0"
           />
+
+          <div className={theme === "dark" ? "banner-eye-dark" : "banner-eye-light"}
+          style={{
+            transform: `translate(${limitedX}%, ${limitedY}%)`,
+            transition: "transform .1s ease-out",
+          }}></div>
         </div>
       </section>
     </div>

@@ -10,7 +10,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
 
-    "homepage": "https://4mser.github.io/deep-eye"
+    "homepage": "https://4mser.github.io/deep-eye/"
   },
   "dependencies": {
     "localforage": "^1.10.0",
