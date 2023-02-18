@@ -435,13 +435,22 @@
   background: var(--primary-color);
   color: var(--secondary-color);
   padding: 1rem 1rem;
-  border-top: 2px solid var(--secondary-color);
+  margin-top: .2rem;
+  transition: .3s;
 }
+
+
 
 .secciones:hover .hidden-menu {
   opacity: 1;
   padding: .5rem 0;
   height:max-content;
+}
+
+.secciones:hover .hidden-menu li:hover {
+  color:var(--primary-color);
+  background:var(--secondary-color) ;
+  cursor: pointer;
 }
 
 @media (max-width: 1000px) {
@@ -492,7 +501,8 @@
 .banner-dark img {
   width: 100%;
   object-fit: contain;
-  transition: .5s;
+    user-select: none;
+    transition: .5s;
   filter: contrast(.8);
 }
 
@@ -506,7 +516,8 @@
   width: 100%;
   object-fit: contain;
   filter: contrast(.8) invert(1);
-  transition: 1s;
+    user-select: none;
+    transition: 1s;
 }
 
 
