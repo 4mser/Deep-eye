@@ -58,6 +58,7 @@ const BannerEye = ({theme}) => {
   limitedY = Math.min(Math.max(y, -25), 25);
 
 
+
     return (
             <section className="banner-eye-container">
 
