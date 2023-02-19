@@ -61,7 +61,7 @@ const Header = ({ onThemeChange, theme }) => {
                         <li className='secciones' onClick={handleSections}>SECCIONES ▼ 
                             <ul className={`hidden-menu ${isMenuOpen ? 'active' : ''}`}>
                                 <Link to='/deep-eye/tips&trips/'><li>Tips & Trips</li></Link>
-                                <Link to='/deep-eye/psicodelicos/'><li>Psicodélicos</li></Link>
+                                <Link to='/deep-eye/psicodelicos/'><li><p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
                                 <Link to='/deep-eye/meditacion/'><li>Meditación</li></Link>
                                 <Link to='/deep-eye/respiracion'><li>Respiración</li></Link>
                                 <Link to='/deep-eye/sueños/'><li>Sueños</li></Link>
