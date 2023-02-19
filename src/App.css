@@ -554,41 +554,40 @@ background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%
 
   .nav.light {
     color: white;
-    gap: 1vw;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
     padding: 1.5rem 1rem;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.612);
+    gap: 1vw;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.361);
     background: rgb(88,195,196);
 background: linear-gradient(167deg, rgba(88,195,196,1) 0%, rgba(17,44,65,1) 92%);
   }
 
   
   .secciones.active .hidden-menu {
-    flex-wrap: wrap;
-    margin-top: 1.6rem;
     opacity: 1;
     position: absolute;
     user-select: none;
-    padding: 2rem 1rem;
-    height:auto;
+    padding: 1.5rem 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    height: fit-content;
   }
   
   .secciones.active .hidden-menu li {
-    width: 10rem;
-    height: 5rem;
-    margin: .5rem;
+    width: 100%;
+    height: 7rem;
     display: flex;
-    justify-content: center;
+    justify-content:flex-end;
     align-items: center;
-    border-radius: 5px;
+    margin-left: 0rem;
+    margin-right: 0rem;
   }
 
   .secciones.active .hidden-menu li p {
-    position: absolute;
-    width: 10rem;
     font-size: .8rem;
-    backdrop-filter: blur(10px);
+    width: 50%;
+    background: rgba(0, 0, 0, 0.48);
   }
 
   .secciones.active .hidden-menu li img {
@@ -596,6 +595,7 @@ background: linear-gradient(167deg, rgba(88,195,196,1) 0%, rgba(17,44,65,1) 92%)
     opacity: 1;
   } 
 
+  
   /* .nav.dark .hidden-menu {
     flex-wrap: wrap;
     z-index: -1;
