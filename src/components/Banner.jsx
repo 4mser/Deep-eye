@@ -18,8 +18,8 @@ const Banner = ({theme}) => {
 
   const handleOrientation = (event) => {
     setPosition({
-      x: (event.gamma + 90) * 20,
-      y: (event.beta + 90) * 20,
+      x: (event.gamma) * 15,
+      y: (event.beta) * 15,
     });
   };
 
@@ -61,7 +61,7 @@ const Banner = ({theme}) => {
 
           <div className={theme === "dark" ? "banner-eye-dark" : "banner-eye-light"}
           style={{
-            transform: `translate(${-limitedX}%, ${-limitedY}%)`,
+            transform: `translate(${limitedX}%, ${limitedY}%)`,
             transition: "transform .1s ease-out"}}>
           </div>
 
