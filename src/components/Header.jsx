@@ -58,14 +58,14 @@ const Header = ({ onThemeChange, theme }) => {
                     <ul className='nav'>
                         <li><Link to='/deep-eye/'>INICIO</Link></li>
                         <li><Link to='/deep-eye/sobre/'>SOBRE</Link></li>
-                        <li className='secciones' onClick={handleSections}>SECCIONES ▼ 
+                        <li className={`secciones ${isMenuOpen ? 'active' : ''}`} onClick={handleSections}>SECCIONES <span>▼</span> 
                             <ul className={`hidden-menu ${isMenuOpen ? 'active' : ''}`}>
-                                <Link to='/deep-eye/tips&trips/'><li>Tips & Trips</li></Link>
+                                <Link to='/deep-eye/tips&trips/'><li><p>Tips & Trips</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
                                 <Link to='/deep-eye/psicodelicos/'><li><p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
-                                <Link to='/deep-eye/meditacion/'><li>Meditación</li></Link>
-                                <Link to='/deep-eye/respiracion'><li>Respiración</li></Link>
-                                <Link to='/deep-eye/sueños/'><li>Sueños</li></Link>
-                                <Link to='/deep-eye/arte/'><li>Diseño</li></Link>
+                                <Link to='/deep-eye/meditacion/'><li><p>Meditación</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/respiracion'><li><p>Respiración</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/sueños/'><li><p>Sueños</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/arte/'><li><p>Diseño</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
                             </ul>
                         </li>
                         <li><Link to='/deep-eye/tienda/'>TIENDA</Link></li>
