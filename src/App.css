@@ -542,12 +542,14 @@
   .hidden-menu {
     flex-wrap: wrap;
     z-index: -1;
+    margin-top: 2rem;
+background: radial-gradient(circle, rgba(107,239,246,1) 0%, rgba(3,103,152,1) 100%);
   }
 
   .hidden-menu li{
     background: black;
     color: white;
-    margin-top: .4rem;
+    margin: 1vw;
     transition: .3s;
     width: 40vw;
     height: 20vw;
@@ -555,9 +557,18 @@
     justify-content: flex-end;
     align-items: center;
     cursor: none;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.557);
     overflow: hidden;
   }
 
+  #psicodelicos {
+    width: 81vw;
+  }
+
+  #psicodelicos p {
+    width: 81vw;
+  }
+  
   .hidden-menu li p {
     width: 40vw;
     line-height: 5vw;

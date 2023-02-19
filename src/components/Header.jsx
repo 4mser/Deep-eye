@@ -104,7 +104,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 1000};
 
                                 <Link to='/deep-eye/psi&neuro/'><li><p>Psicología & Neurociencia</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/MRI-brain-wp.gif" alt="" /></li></Link>
 
-                                <Link to='/deep-eye/psicodelicos/'><li><p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/psicodelicos/'><li id='psicodelicos'><p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
 
                                 <Link to='/deep-eye/meditacion/'><li><p>Meditación & Respiración</p> <img id='meditation-gif' src="https://s3.amazonaws.com/skybar.database.teset.1/409F.gif" alt="" /></li></Link>
 
