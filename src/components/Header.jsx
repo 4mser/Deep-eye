@@ -121,6 +121,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                         <li className={`secciones ${isMenuOpen ? 'active' : ''}`} onClick={handleSections}>
 
                             <div className="icon-p">
+
                                 <SiMarketo className='icon'></SiMarketo> 
                                 <p>SECCIONES <span>▼</span></p>
                                 
@@ -132,43 +133,50 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                                 
                                 <Link to='/deep-eye/tips&trips/'>
                                     <li>
-                                        <p>Tips & Trips</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/psychedelic-eye.gif" alt="" />
+                                        <p>Tips & Trips</p> 
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/psychedelic-eye.gif" alt="" />
                                     </li>
                                 </Link>
 
                                 <Link to='/deep-eye/psi&neuro/'>
                                     <li>
-                                        <p>Psicología & Neurociencia</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/MRI-brain-wp.gif" alt="" />
+                                        <p>Psicología & Neurociencia</p>  
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/MRI-brain-wp.gif" alt="" />
                                     </li>
                                 </Link>
 
                                 <Link to='/deep-eye/psicodelicos/'>
                                     <li id='psicodelicos'>
-                                        <p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" />
+                                        <p>Psicodélicos</p> 
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" />
                                     </li>
                                 </Link>
 
                                 <Link to='/deep-eye/meditacion/'>
                                     <li>
-                                        <p>Meditación & Respiración</p> <img id='meditation-gif' src="https://s3.amazonaws.com/skybar.database.teset.1/409F.gif" alt="" />
+                                        <p>Meditación & Respiración</p> 
+                                        <img id='meditation-gif' src="https://s3.amazonaws.com/skybar.database.teset.1/409F.gif" alt="" />
                                     </li>
                                 </Link>
 
                                 <Link to='/deep-eye/respiracion'>
                                     <li>
-                                        <p>Inteligencia Artificial</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/GIF3.gif" alt="" />
+                                        <p>Inteligencia Artificial</p>  
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/GIF3.gif" alt="" />
                                     </li>
                                 </Link>
 
                                 <Link to='/deep-eye/sueños/'>
                                     <li>
-                                        <p>Sueños</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/dr-strange-trippy.gif" alt="" />
+                                        <p>Sueños</p>  
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/dr-strange-trippy.gif" alt="" />
                                     </li>
                                 </Link>
 
                                 <Link to='/deep-eye/arte/'>
                                     <li>
-                                        <p>Arte & Diseño</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/8cbd7e449e8cbcd45368837ebab7ba5b.gif" alt="" />
+                                        <p>Arte & Diseño</p>  
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/8cbd7e449e8cbcd45368837ebab7ba5b.gif" alt="" />
                                     </li>
                                 </Link>
 
