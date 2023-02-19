@@ -6,7 +6,7 @@ const Bg = ( { theme } )=> {
     videoRef.current.play();
   }, []);
 
-  const sensitivity = window.innerWidth > 700 ? { x: 600, y: 100 } : { x: 100, y: 50 };
+  const sensitivity = window.innerWidth > 700 ? { x: 600, y: 100 } : { x: 10, y: 5 };
 
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -64,7 +64,7 @@ const Bg = ( { theme } )=> {
         <div className={theme === 'light' ? 'bg light' : 'bg dark'}>
            <video  className={theme === 'light' ? 'bg-video light' : 'bg-video dark'}
                     ref={videoRef} loop muted playsInline style={{
-                    transform: `translate(${limitedX}%, ${limitedY}%)`,
+                    transform: `translate(${-limitedX}%, ${-limitedY}%)`,
                     transition: "transform 0.1s ease-out",
                     }}>
                 <source src="https://s3.amazonaws.com/skybar.database.teset.1/bg.mp4" type="video/mp4"/>
