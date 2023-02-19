@@ -11,7 +11,7 @@ import { HiSun } from 'react-icons/hi'
 
 const Header = ({ onThemeChange, theme }) => {
 
-const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 1000};
+const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
 
   const [position, setPosition] = useState({ x: 0 });
 
@@ -79,6 +79,8 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 1000};
         setIsMenuOpen(!isMenuOpen); 
     }
 
+   
+
     return (
         <section>
             <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -91,7 +93,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 1000};
 
 
                 <div className={`nav-container ${isOpen ? 'active' : ''}`}>
-                    <ul className='nav'>
+                    <ul className={`nav ${theme === 'dark' ? 'dark' : 'light'}`}>
                         <li><Link to='/deep-eye/'>INICIO</Link></li>
                         <li><Link to='/deep-eye/sobre/'>SOBRE</Link></li>
                         <li className={`secciones ${isMenuOpen ? 'active' : ''}`} onClick={handleSections}>SECCIONES <span>▼</span> 

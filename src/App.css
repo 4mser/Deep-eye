@@ -400,7 +400,9 @@
 /* Nav */
 
 
-.nav {
+.nav.dark,
+.nav.light {
+  background: none;
   list-style: none;
   display: flex;
   flex-direction: row;
@@ -409,7 +411,6 @@
   color: var(--primary-color);
   transition: 1s;
   z-index: 999;
-
 }
 
 
@@ -517,33 +518,40 @@
   }
 
 
-  .nav {
+  .nav.dark {
     color: white;
     flex-direction: row;
     justify-content: space-between;
     padding: 2rem 1rem;
     gap: 1rem;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.612);
-    background: rgb(115,4,114);
-  background: linear-gradient(21deg, rgba(115, 4, 113, 0.822) 0%, rgba(56, 197, 204, 0.903) 100%);
-  animation: infinite  Nav 5s ease-in-out;
+    background: linear-gradient(211deg, rgba(79,79,79,1) 0%, rgba(20,20,20,1) 100%);
   }
 
-/*   @keyframes Nav {
-    0% {
-      filter: hue-rotate(0deg);
-    } 50% {
-      filter: hue-rotate(360deg);
-    } 100% {
-      filter: hue-rotate(0deg);
-    }
-  } */
+  .nav.light {
+    color: black;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 2rem 1rem;
+    gap: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.612);
+    background: linear-gradient(214deg, rgba(255,255,255,1) 0%, rgba(154,154,154,1) 100%);
+  }
 
-  .hidden-menu {
+
+
+  .nav.dark .hidden-menu {
     flex-wrap: wrap;
     z-index: -1;
     margin-top: 2rem;
-background: radial-gradient(circle, rgba(107,239,246,1) 0%, rgba(3,103,152,1) 100%);
+    background: linear-gradient(214deg, rgba(255,255,255,1) 0%, rgba(154,154,154,1) 100%);
+  }
+
+  .nav.light .hidden-menu {
+    flex-wrap: wrap;
+    z-index: -1;
+    margin-top: 2rem;
+    background: linear-gradient(211deg, rgba(79,79,79,1) 0%, rgba(20,20,20,1) 100%);
   }
 
   .hidden-menu li{
@@ -576,10 +584,14 @@ background: radial-gradient(circle, rgba(107,239,246,1) 0%, rgba(3,103,152,1) 10
     backdrop-filter: blur(10px);
   }
 
+  .hidden-menu {
+
+  }
+
   .hidden-menu.active {
   opacity: 1;
   padding: 2.5rem 0;
-  height:max-content;
+  height:fit-content;
   }
 
   .hidden-menu li img {
@@ -591,7 +603,7 @@ background: radial-gradient(circle, rgba(107,239,246,1) 0%, rgba(3,103,152,1) 10
   .secciones span {
     position: absolute;
     margin-left: .5rem;
-    transition: .5s ease-in-out;
+    transition: .2s;
   }
   
   .secciones.active span {
