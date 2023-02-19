@@ -5,7 +5,7 @@ import React, { useState, useEffect } from "react";
 const Banner = ({theme}) => {
 
 
-  const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 20 } : { x: 5, y: 10 };
+  const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 10 } : { x: 50, y: 50 };
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -18,13 +18,13 @@ const Banner = ({theme}) => {
 
   const handleOrientation = (event) => {
     setPosition({
-      x: (event.gamma + 90) * 20,
-      y: (event.beta + 90) * 20,
+      x: (event.gamma + 90) * 9,
+      y: (event.beta + 90) * 9,
     });
   };
 
   useEffect(() => {
-    if (window.innerWidth > 1000) {
+    if (window.innerWidth > 700) {
         window.addEventListener("mousemove", handleMouseMove);
         return () => {
           window.removeEventListener("mousemove", handleMouseMove);
