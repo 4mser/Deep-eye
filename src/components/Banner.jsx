@@ -124,7 +124,7 @@ const Banner = ({theme}) => {
   limitedX = Math.min(Math.max(x, -25), 25);
   limitedY = Math.min(Math.max(y, -25), 25); */
 
-  const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 20 } : { x: 2, y: 2 };
+  const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 20 } : { x: 50, y: 50 };
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -137,8 +137,8 @@ const Banner = ({theme}) => {
 
   const handleOrientation = (event) => {
     setPosition({
-      x: (event.gamma + 90) * 5,
-      y: (event.beta + 90) * 5,
+      x: (event.gamma + 90) * 9,
+      y: (event.beta + 90) * 9,
     });
   };
 
