@@ -6,8 +6,7 @@ const Bg = ( { theme } )=> {
     videoRef.current.play();
   }, []);
 
-  const sensitivity = window.innerWidth > 700 ? { x: 600, y: 100 } : { x: 10, y: 10 };
-
+  const sensitivity = window.innerWidth > 1000 ? { x: 300, y: 100 } : { x: 50, y: 50 };
 
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
@@ -20,36 +19,24 @@ const Bg = ( { theme } )=> {
 
   const handleOrientation = (event) => {
     setPosition({
-      x: (event.gamma + 90) * 5,
-      y: (event.beta + 90) * 5,
-    });
-  };
-
-  const handleMotion = (event) => {
-    setPosition({
-      x: (event.accelerationIncludingGravity.x + 10) * 5,
-      y: (event.accelerationIncludingGravity.y + 10) * 5,
+      x: (event.gamma + 90) * 1,
+      y: (event.beta + 90) * 1,
     });
   };
 
   useEffect(() => {
-  if (window.innerWidth > 700) {
-      window.addEventListener("mousemove", handleMouseMove);
-      return () => {
-        window.removeEventListener("mousemove", handleMouseMove);
-      };
-    } else if (window.DeviceMotionEvent) {
-      window.addEventListener("devicemotion", handleMotion);
-      return () => {
-        window.removeEventListener("devicemotion", handleMotion);
-      };
-    } else {
-      window.addEventListener("deviceorientation", handleOrientation);
-      return () => {
-        window.removeEventListener("deviceorientation", handleOrientation);
-      };
-    }
-  }, []);
+    if (window.innerWidth > 700) {
+        window.addEventListener("mousemove", handleMouseMove);
+        return () => {
+          window.removeEventListener("mousemove", handleMouseMove);
+        };
+      } else {
+        window.addEventListener("deviceorientation", handleOrientation);
+        return () => {
+          window.removeEventListener("deviceorientation", handleOrientation); 
+        };
+      }
+    }, []);
 
     let x = 0;
     let y = 0;

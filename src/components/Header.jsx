@@ -11,7 +11,7 @@ import { HiSun } from 'react-icons/hi'
 
 const Header = ({ onThemeChange, theme }) => {
 
-const sensitivity = window.innerWidth > 1000 ? { x: 120} : { x: 1000};
+const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 1000};
 
   const [position, setPosition] = useState({ x: 0 });
 
