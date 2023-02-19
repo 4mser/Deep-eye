@@ -813,6 +813,7 @@ background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%
   padding-left: 10vw;
   display: flex;
   align-items: center;
+  flex-direction: column;
 }
 
 .about h2 {
@@ -821,7 +822,6 @@ background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%
   line-height: 1.5vw;
   color: var(--primary-color);
   transition: 1s;
-  opacity: .8;
   padding: 1rem;
 }
 
@@ -836,11 +836,10 @@ background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%
   .about h2 {
     width: 100%;
     font-weight: 500;
-    font-size: 1.5rem;
+    font-size: 1.3rem;
     line-height: 1.6rem;
     color: var(--primary-color);
     transition: 1s;
-    opacity: .8;
     padding: 1rem;
   }
 }
