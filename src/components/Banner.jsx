@@ -18,8 +18,8 @@ const Banner = ({theme}) => {
 
   const handleOrientation = (event) => {
     setPosition({
-      x: (event.gamma) * 15,
-      y: (event.beta) * 15,
+      x: (event.gamma) * 50,
+      y: (event.beta) * 50,
     });
   };
 
