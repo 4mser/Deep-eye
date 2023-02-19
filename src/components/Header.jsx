@@ -37,6 +37,12 @@ const Header = ({ onThemeChange, theme }) => {
       }
     
 
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+    const handleSections = () => {
+        setIsMenuOpen(!isMenuOpen); // Cambia el estado al valor opuesto
+    }
+
     return (
         <section>
             <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
@@ -52,13 +58,14 @@ const Header = ({ onThemeChange, theme }) => {
                     <ul className='nav'>
                         <li><Link to='/deep-eye/'>INICIO</Link></li>
                         <li><Link to='/deep-eye/sobre/'>SOBRE</Link></li>
-                        <li className='secciones'>SECCIONES ▼ 
-                            <ul className='hidden-menu'>
-                                <li>Psicodélicos</li>
-                                <li>Meditación</li>
-                                <li>Respiración</li>
-                                <li>Sueños</li>
-                                <li>Arte</li>
+                        <li className='secciones' onClick={handleSections}>SECCIONES ▼ 
+                            <ul className={`hidden-menu ${isMenuOpen ? 'active' : ''}`}>
+                                <Link to='/deep-eye/tips&trips/'><li>Tips & Trips</li></Link>
+                                <Link to='/deep-eye/psicodelicos/'><li>Psicodélicos</li></Link>
+                                <Link to='/deep-eye/meditacion/'><li>Meditación</li></Link>
+                                <Link to='/deep-eye/respiracion'><li>Respiración</li></Link>
+                                <Link to='/deep-eye/sueños/'><li>Sueños</li></Link>
+                                <Link to='/deep-eye/arte/'><li>Diseño</li></Link>
                             </ul>
                         </li>
                         <li><Link to='/deep-eye/tienda/'>TIENDA</Link></li>

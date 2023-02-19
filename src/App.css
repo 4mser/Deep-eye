@@ -58,14 +58,14 @@
 
   .bg.light {
     background: rgba(0, 0, 0, 0);  
-    transform: translate(-50rem, -50%);
+    transform: translate(-50rem, -50%) ; 
   }
 
   .bg.dark {
     width: 120%;
     height: 120vh;
     background-color: rgb(255, 255, 255);  
-    transform: translate(-50rem, -50%);
+    transform: translate(-50rem, -50%) rotate(360deg);
   }
 
 }
@@ -421,29 +421,38 @@
   list-style: none;
   display: flex;
   justify-content: center;
-  flex-direction: column;
+  flex-direction: row;
+  flex-wrap: nowrap;
   position: absolute;
   text-align: center;
   opacity: 0;
   height: 0;
-  transform: translateX(-1rem);
+  /* transform: translateX(-50rem); */
+  width: 100%;
   overflow: hidden;
+  left: 0;
   transition: .2s;
 }
 
 .hidden-menu li{
   background: var(--primary-color);
   color: var(--secondary-color);
-  padding: 1rem 1rem;
   margin-top: .2rem;
   transition: .3s;
+  width: 16vw;
+  height: 10vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: .2rem;
+  margin-right: .2rem;
 }
 
 
 
-.secciones:hover .hidden-menu {
+.secciones:hover .hidden-menu  {
   opacity: 1;
-  padding: .5rem 0;
+  padding: 3rem 0;
   height:max-content;
 }
 
@@ -476,6 +485,30 @@
     background: linear-gradient(32deg, rgba(0,98,108,1) 0%, rgba(0,229,255,1) 100%);
   }
 
+  .hidden-menu {
+    flex-wrap: wrap;
+    z-index: -1;
+  }
+
+  .hidden-menu li{
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    margin-top: .9rem;
+    transition: .3s;
+    width: 30vw;
+    height: 15vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hidden-menu.active {
+  opacity: 1;
+  padding: 3rem 0;
+  height:max-content;
+  }
+
+  
 
 }
 
@@ -488,13 +521,15 @@
   height: 100vh;
   display: flex;
   justify-content: center;
+  flex-direction: column;
   align-items: center;
   overflow: hidden;
 }
 
+
 .banner-dark {
-  width: 40rem;
-  height: 40rem;
+  width: 30vw;
+  height: 30vw;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -511,8 +546,8 @@
 }
 
 .banner-light {
-  width: 40rem;
-  height: 40rem;
+  width: 30vw;
+  height: 30vw;
   overflow: hidden;display: flex;
   justify-content: center;
   align-items: center;
@@ -532,13 +567,13 @@
 @media (max-width: 1000px) {
   .banner-light {
     width: 20rem;
-    height: 20rem;
+    height: 25rem;
     overflow: hidden;
   }
 
   .banner-dark {
     width: 20rem;
-    height: 20rem;
+    height: 25rem;
     overflow: hidden;
   }
 }
@@ -593,4 +628,19 @@
     height: 5rem;
     overflow: hidden;
   }
+}
+
+
+/* Title */
+
+.title-banner-light {
+  color: var(--primary-color);
+  transition: 1s;
+  user-select: none;
+}
+
+.title-banner-dark {
+  color: var(--primary-color);
+  transition: 1s;
+  user-select: none;
 }

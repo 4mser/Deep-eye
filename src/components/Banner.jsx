@@ -168,13 +168,10 @@ const Banner = ({theme}) => {
   return (
     <div>
       <section className="banner-container">
-        <div
-          className={theme === "dark" ? "banner-dark" : "banner-light"}
-          /* style={{
-            transform: `translate(${-limitedX}%, ${-limitedY}%)`,
-            transition: "transform 1s ease-out",
-          }} */
-        >
+
+
+        <div className={theme === "dark" ? "banner-dark" : "banner-light"}>
+
           <img
             src="https://s3.amazonaws.com/skybar.database.teset.1/imgBanner-02.png"
             alt="Deep-Eye-logo"
@@ -184,15 +181,17 @@ const Banner = ({theme}) => {
           <div className={theme === "dark" ? "banner-eye-dark" : "banner-eye-light"}
           style={{
             transform: `translate(${window.innerWidth > 1000 ? limitedX : -limitedX}%, ${window.innerWidth > 1000 ? limitedY : -limitedY}%)`,
-            transition: "transform .1s ease-out",
-          }}>
-            {/* <div className={theme === "dark" ? "pupila-dark" : "pupila-light"}
-            style={{
-              transform: `translate(${limitedX}%, ${limitedY}%)`,
-              transition: "transform .1s ease-out",
-            }}></div> */}
+            transition: "transform .1s ease-out"}}>
           </div>
+
         </div>
+
+
+        <div className={theme === 'dark' ? 'title-banner-dark' : 'title-banner-light'}>
+          <h1></h1>
+        </div>
+
+
       </section>
     </div>
   );
