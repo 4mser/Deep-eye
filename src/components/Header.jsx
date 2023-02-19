@@ -5,6 +5,10 @@ import { Link } from 'react-router-dom';
 /* -- Icons -- */
 import { MdNightlight } from 'react-icons/md'
 import { HiSun } from 'react-icons/hi'
+import {AiFillHome} from 'react-icons/ai'
+import {SiMarketo} from 'react-icons/si'
+import {FaShoppingCart} from 'react-icons/fa'
+import {RiFileInfoFill} from 'react-icons/ri'
 /* ---- */
 
 
@@ -93,33 +97,93 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
 
 
                 <div className={`nav-container ${isOpen ? 'active' : ''}`}>
+
                     <ul className={`nav ${theme === 'dark' ? 'dark' : 'light'}`}>
-                        <li><Link to='/deep-eye/'>INICIO</Link></li>
-                        <li><Link to='/deep-eye/sobre/'>SOBRE</Link></li>
-                        <li className={`secciones ${isMenuOpen ? 'active' : ''}`} onClick={handleSections}>SECCIONES <span>▼</span> 
-                            <ul className={`hidden-menu ${isMenuOpen ? 'active' : ''}`} style={{
-            transform: `translate(${-limitedX}%`,
-            transition: "transform 0.1s ease-out",
-          }}>
+
+                        <li>
+                            <Link to='/deep-eye/'> 
+                                <div className="icon-p">
+                                    <AiFillHome className='icon'></AiFillHome> 
+                                    <p>INICIO</p>
+                                </div>
+                            </Link>
+                        </li>
+
+                        <li>
+                            <Link to='/deep-eye/sobre/'>
+                                <div className="icon-p">
+                                    <RiFileInfoFill className='icon'></RiFileInfoFill> 
+                                    <p>SOBRE</p>
+                                </div> 
+                            </Link>
+                        </li>
+
+                        <li className={`secciones ${isMenuOpen ? 'active' : ''}`} onClick={handleSections}>
+
+                            <div className="icon-p">
+                                <SiMarketo className='icon'></SiMarketo> 
+                                <p>SECCIONES <span>▼</span></p>
                                 
-                                <Link to='/deep-eye/tips&trips/'><li><p>Tips & Trips</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/psychedelic-eye.gif" alt="" /></li></Link>
+                            </div>
 
-                                <Link to='/deep-eye/psi&neuro/'><li><p>Psicología & Neurociencia</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/MRI-brain-wp.gif" alt="" /></li></Link>
+                            <ul className={`hidden-menu ${isMenuOpen ? 'active' : ''}`} 
+                                style={{ transform: `translate(${-limitedX}%`,
+                                transition: "transform 0.1s ease-out" }}>
+                                
+                                <Link to='/deep-eye/tips&trips/'>
+                                    <li>
+                                        <p>Tips & Trips</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/psychedelic-eye.gif" alt="" />
+                                    </li>
+                                </Link>
 
-                                <Link to='/deep-eye/psicodelicos/'><li id='psicodelicos'><p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/psi&neuro/'>
+                                    <li>
+                                        <p>Psicología & Neurociencia</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/MRI-brain-wp.gif" alt="" />
+                                    </li>
+                                </Link>
 
-                                <Link to='/deep-eye/meditacion/'><li><p>Meditación & Respiración</p> <img id='meditation-gif' src="https://s3.amazonaws.com/skybar.database.teset.1/409F.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/psicodelicos/'>
+                                    <li id='psicodelicos'>
+                                        <p>Psicodélicos</p> <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" />
+                                    </li>
+                                </Link>
 
-                                <Link to='/deep-eye/respiracion'><li><p>Inteligencia Artificial</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/GIF3.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/meditacion/'>
+                                    <li>
+                                        <p>Meditación & Respiración</p> <img id='meditation-gif' src="https://s3.amazonaws.com/skybar.database.teset.1/409F.gif" alt="" />
+                                    </li>
+                                </Link>
 
-                                <Link to='/deep-eye/sueños/'><li><p>Sueños</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/dr-strange-trippy.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/respiracion'>
+                                    <li>
+                                        <p>Inteligencia Artificial</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/GIF3.gif" alt="" />
+                                    </li>
+                                </Link>
 
-                                <Link to='/deep-eye/arte/'><li><p>Arte & Diseño</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/8cbd7e449e8cbcd45368837ebab7ba5b.gif" alt="" /></li></Link>
+                                <Link to='/deep-eye/sueños/'>
+                                    <li>
+                                        <p>Sueños</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/dr-strange-trippy.gif" alt="" />
+                                    </li>
+                                </Link>
+
+                                <Link to='/deep-eye/arte/'>
+                                    <li>
+                                        <p>Arte & Diseño</p>  <img src="https://s3.amazonaws.com/skybar.database.teset.1/8cbd7e449e8cbcd45368837ebab7ba5b.gif" alt="" />
+                                    </li>
+                                </Link>
 
 
                             </ul>
                         </li>
-                        <li><Link to='/deep-eye/tienda/'>TIENDA</Link></li>
+
+                        <li>
+                            <Link to='/deep-eye/tienda/'> 
+                                <div className="icon-p">
+                                    <FaShoppingCart className='icon'></FaShoppingCart> 
+                                    <p>TIENDA</p>
+                                </div>
+                            </Link>
+                        </li>
                     </ul>
                 </div>
 
