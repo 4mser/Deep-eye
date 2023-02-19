@@ -6,7 +6,7 @@ const Bg = ( { theme } )=> {
     videoRef.current.play();
   }, []);
 
-  const sensitivity = window.innerWidth > 700 ? { x: 600, y: 100 } : { x: 10, y: 5 };
+  const sensitivity = window.innerWidth > 700 ? { x: 600, y: 100 } : { x: 10, y: 10 };
 
 
   const [position, setPosition] = useState({ x: 0, y: 0 });

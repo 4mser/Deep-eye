@@ -21,7 +21,12 @@ const sensitivity = window.innerWidth > 1000 ? { x: 120} : { x: 1000};
     })
   }
 
-
+  const handleOrientation = (event) => {
+    setPosition({
+      x: (event.gamma + 90) * 5,
+      y: (event.beta + 90) * 5,
+    });
+  };
 
   useEffect(() => {
     if (window.innerWidth > 1000) {
