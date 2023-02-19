@@ -4,6 +4,7 @@ const Home = ({theme}) => {
     return (
         <section>
             <Banner theme={theme}></Banner>
+            
         </section>
     )
 }
