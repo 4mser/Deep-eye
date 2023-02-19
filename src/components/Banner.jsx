@@ -1,5 +1,3 @@
-
-
 import React, { useState, useEffect } from "react";
 
 const Banner = ({theme}) => {
@@ -61,7 +59,7 @@ const Banner = ({theme}) => {
 
           <div className={theme === "dark" ? "banner-eye-dark" : "banner-eye-light"}
           style={{
-            transform: `translate(${limitedX}%, ${limitedY}%)`,
+            transform: `translate(${limitedX}%, ${-limitedY}%)`,
             transition: "transform .1s ease-out"}}>
           </div>
 
