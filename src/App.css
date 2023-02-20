@@ -483,6 +483,7 @@
 .hidden-menu li p {
   position: absolute;
   width: 12vw;
+  transition: .3s;
   z-index: 10;
 }
 
@@ -503,6 +504,8 @@
     overflow:visible;
     height:max-content;
   }
+
+  
 
   .icon {
     display: none;
@@ -631,6 +634,8 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
     filter: none;
     opacity: 1;
   } 
+
+
 
 
 

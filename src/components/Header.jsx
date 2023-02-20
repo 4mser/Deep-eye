@@ -2,6 +2,8 @@ import  { React, useState, useEffect } from 'react';
 
 import { Link } from 'react-router-dom';
 
+import { useLocation } from 'react-router-dom';
+
 /* -- Icons -- */
 import { MdNightlight, MdOutlineDashboard, MdDashboard, MdOutlineAnnouncement, MdAnnouncement } from 'react-icons/md'
 import { HiSun } from 'react-icons/hi'
@@ -14,6 +16,14 @@ import {RxMoon} from 'react-icons/rx'
 
 
 const Header = ({ onThemeChange, theme }) => {
+
+    const location = useLocation();
+
+    let iconoInicio = location.pathname === '/deep-eye/' ? <AiFillHome className='icon' /> : <AiOutlineHome className='icon' />;
+  let iconoSobre = location.pathname === '/deep-eye/sobre/' ? <MdAnnouncement className='icon' /> : <MdOutlineAnnouncement className='icon' />;
+  let iconoTienda = location.pathname === '/deep-eye/tienda/' ? <RiShoppingCart2Fill className='icon' /> : <RiShoppingCart2Line className='icon' />;
+
+
 
 const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
 
@@ -105,7 +115,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                         <li>
                             <Link to='/deep-eye/'> 
                                 <div className="icon-p">
-                                    <AiOutlineHome className='icon'></AiOutlineHome> 
+                                    {iconoInicio}
                                     <p>INICIO</p>
                                 </div>
                             </Link>
@@ -114,7 +124,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                         <li>
                             <Link to='/deep-eye/sobre/'>
                                 <div className="icon-p">
-                                    <MdOutlineAnnouncement className='icon'></MdOutlineAnnouncement> 
+                                    {iconoSobre} 
                                     <p>SOBRE</p>
                                 </div> 
                             </Link>
@@ -124,7 +134,14 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
 
                             <div className="icon-p">
 
+                            {isMenuOpen ? (
+                                <MdDashboard className='icon'></MdDashboard> 
+                            ) : (
                                 <MdOutlineDashboard className='icon'></MdOutlineDashboard> 
+                            )}
+
+                                
+
                                 <p>SECCIONES <span className='arrow-sections'>▼</span></p>
                                 
                             </div>
@@ -189,7 +206,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                         <li>
                             <Link to='/deep-eye/tienda/'> 
                                 <div className="icon-p">
-                                    <RiShoppingCart2Line className='icon'></RiShoppingCart2Line> 
+                                    {iconoTienda}
                                     <p>TIENDA</p>
                                 </div>
                             </Link>
