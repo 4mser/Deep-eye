@@ -231,7 +231,7 @@
   cursor: pointer;
   transition: .2s;
   display: none;
-  transform:scale(1.1) rotate(180deg);
+  transform:scale(1.1) rotate(180deg) translateY(-.1rem);
 }
 
 @media (max-width: 1000px)  {
@@ -260,7 +260,7 @@
 }
 
 .menu-btn:hover  {
-  transform: rotate(180deg) scale(1.2);
+  transform: rotate(180deg) scale(1.2) translateY(-.1rem);
   filter: drop-shadow(0 0 2px white);
 }
 
@@ -539,11 +539,11 @@
     flex-direction: column;
     width: 5rem;
     cursor: none;
-    transform: translateY(.3rem);
+    transform: translateY(.4rem);
   }
 
   .icon-p p {
-    font-size: .7rem;
+    font-size: .6rem;
   }
 
   .icon-p .icon {
@@ -554,14 +554,14 @@
   
 
   .nav.dark {
-    color: white;
+    color: rgb(40, 40, 40);
     flex-direction: row;
     justify-content: space-around;
     padding: 1.5rem 1rem;
     gap: 1vw;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.361);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
     background: rgb(34,193,195);
-background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%);
+background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%);
   }
 
   .nav.light {
@@ -581,7 +581,7 @@ background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%
     user-select: none;
     padding: 1.5rem 0;
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     height: fit-content;
     z-index: -1;
   }
@@ -599,8 +599,8 @@ background: linear-gradient(27deg, rgba(34,193,195,1) 0%, rgba(119,30,153,1) 92%
   }
 
   .secciones.active .hidden-menu li p {
-    font-size: .8rem;
-    width: 50%;
+    font-size: .7rem;
+    width: 33.3%;
     background: rgba(0, 0, 0, 0.48);
   }
 
