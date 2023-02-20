@@ -494,6 +494,8 @@
 
 
 
+
+
 @media (min-width: 1000px) {
   .secciones:hover .hidden-menu  {
     opacity: 1;
@@ -520,6 +522,7 @@
 
   .nav-container {
     position: fixed;
+    height: 100vh;
     width: 100%;
     top: 7rem;
     right: -110%;
@@ -529,8 +532,19 @@
 
   .nav-container.active {
     right: 0;
+   
   }
 
+  .nav-container.active .bg-sections {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    z-index: -10;
+  }
+
+  .nav-container.active .bg-sections.active {
+    background: rgba(0, 0, 0, 0.777);
+  }
 
   .icon-p {
     display: flex;
@@ -551,13 +565,21 @@
     margin-bottom: .3rem;
   }
 
-  
+  .secciones .arrow-sections {
+    position: absolute; 
+    margin-left: .2rem;
+    transition: .2s;
+  }
+
+  .secciones.active .arrow-sections {
+    transform: rotateX(180deg);
+  }
 
   .nav.dark {
     color: rgb(40, 40, 40);
     flex-direction: row;
     justify-content: space-around;
-    padding: 1.5rem 1rem;
+    padding: 1rem;
     gap: 1vw;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
     background: rgb(34,193,195);
@@ -568,7 +590,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
     color: white;
     flex-direction: row;
     justify-content: space-around;
-    padding: 1.5rem 1rem;
+    padding: 1rem 1rem;
     gap: 1vw;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.361);
     background: rgb(88,195,196);
@@ -579,7 +601,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   .secciones.active .hidden-menu {
     opacity: 1;
     user-select: none;
-    padding: 1.5rem 0;
+    padding: 1rem 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     height: fit-content;
@@ -819,6 +841,10 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 .about h2 {
   width: 40vw;
   font-size: 1.5vw;
+  left: 10%;
+  top: 50%;
+  position: absolute;
+  transform: translate(-10%, -50%);
   line-height: 1.5vw;
   color: var(--primary-color);
   transition: 1s;
