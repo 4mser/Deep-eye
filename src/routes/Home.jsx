@@ -5,7 +5,7 @@ const Home = ({theme}) => {
         <section>
             <Banner theme={theme}></Banner>
             <div className="about">
-                <h2>Nuestra plataforma se dedica a la investigación y reflexión sobre la mente humana y sus estados no-ordinarios de conciencia. Nos esforzamos por comprender cómo estos estados han estado involucrados en la evolución del cerebro humano, analizando datos de las experiencias otorgadas por nuestros usuarios.
+                <h2>Somos una plataforma dedicada a la investigación y reflexión sobre la mente humana y sus estados no-ordinarios de conciencia. Nos esforzamos por comprender cómo estos estados han estado involucrados en la evolución del cerebro humano, analizando datos de las experiencias otorgadas por nuestros usuarios.
 
                 <br /><br />
 
@@ -13,7 +13,7 @@ const Home = ({theme}) => {
 
                 <br /><br />
 
-                Estamos enfocados en proporcionar información precisa y confiable sobre estos temas, a través de investigaciones rigurosas y una comunicación transparente y responsable. Nos preocupamos profundamente por la salud y el bienestar de nuestros usuarios, y estamos comprometidos en hacer nuestra contribución al avance de la comprensión de la mente humana de manera ética, legal y sin tabúes. </h2>
+                Estamos enfocados en proporcionar información precisa y confiable sobre estos temas, a través de investigaciones rigurosas y una comunicación transparente y responsable, preocupandonos profundamente por la salud y el bienestar de nuestros usuarios, y  comprometidos en hacer nuestra contribución al avance de la comprensión de la mente humana de manera ética, legal y sin tabúes. </h2>
             </div>
         </section>
     )

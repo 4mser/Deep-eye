@@ -893,11 +893,11 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   .about h2 {
     width: 100%;
     font-weight: 500;
-    font-size: 1.3rem;
-    line-height: 1.6rem;
+    font-size: .9rem;
+    line-height: 1.4rem;
     color: var(--primary-color);
     transition: 1s;
-    padding: 1rem;
+    padding: 2rem;
   }
 }
 
