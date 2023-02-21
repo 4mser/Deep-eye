@@ -889,6 +889,8 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   }
   
   .about h2 {
+    margin-top:2rem;
+
     width: 100%;
     font-weight: 500;
     font-size: .9rem;
