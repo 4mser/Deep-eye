@@ -1,4 +1,5 @@
-
+import GraficoRadarMultiple from "./graficos/GraficoRadarMultiple.jsx";
+import GraficoRadar from "./graficos/GraficoRadar.jsx";
 
 import { useState } from "react";
 
@@ -53,10 +54,10 @@ const TripsUsers = () => {
                                 <div className="btn-graf-user">no sé</div>
                             </div>
 
-                            {/* <div className="grafico-user-trip">
+                            <div className="grafico-user-trip">
                                 {selectedGrafico === "generales" && <GraficoRadar></GraficoRadar>}
                                 {selectedGrafico === "por_hora" && <GraficoRadarMultiple></GraficoRadarMultiple>}
-                            </div> */}
+                            </div>
                         </div>
                     </div>
                 </div>
