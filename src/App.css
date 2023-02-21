@@ -105,7 +105,7 @@
 
 .header.scrolled {
   border-bottom: 1px solid var(--shadow);
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.168);
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.348);
   background: var(--secondary-color);
   /* transition: 1s;backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px); */
