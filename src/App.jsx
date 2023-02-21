@@ -48,6 +48,7 @@ function App() {
             id={psicodelico.id} tema={tema}/>} ></Route>
           ))}
 
+              <Route path='/deep-eye/psicodelicos/lsd' element={<Lsd tema={tema}></Lsd>}></Route>
 
         </Routes>
       </BrowserRouter>
