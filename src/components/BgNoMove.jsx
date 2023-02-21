@@ -1,6 +1,6 @@
-const BgNoMove = ({theme}) => {
+const BgNoMove = ({tema}) => {
     return (
-        <div className={`bg-body ${theme === 'dark' ? 'dark' : 'light'}`}></div>
+        <div className={`bg-body ${tema === 'dark' ? 'dark' : 'light'}`}></div>
     )
 }
 

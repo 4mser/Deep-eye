@@ -12,17 +12,18 @@ import BgNoMove from './components/BgNoMove';
 import Psicodelicos from './routes/Psicodelicos';
 import psicodelicos from './data-base/PsicodelicosData';
 import ViewPsicodelicos from './components/psicodelicos/ViewPsicodelicos';
+import Lsd from './components/psicodelicos/Lsd';
 
 
 function App() {
 
-  const [theme, setTheme] = useState('dark');
+  const [tema, setTema] = useState('dark');
 
-  const handleThemeChange = () => {
-    if (theme === 'dark') {
-      setTheme('light');
+  const handleTemaChange = () => {
+    if (tema === 'dark') {
+      setTema('light');
     } else {
-      setTheme('dark');
+      setTema('dark');
     }
   }
 
@@ -30,21 +31,21 @@ function App() {
 
 
   return (
-    <div className={`App ${theme}`}>
+    <div className={`App ${tema}`}>
       <BrowserRouter>
-      <BgNoMove theme={theme}></BgNoMove>
-        <Bg theme={theme}></Bg>
-        <Header onThemeChange={handleThemeChange} theme={theme}></Header>
+      <BgNoMove tema={tema}></BgNoMove>
+        <Bg tema={tema}></Bg>
+        <Header onTemaChange={handleTemaChange} tema={tema}></Header>
 
         <Routes>
-          <Route path='/deep-eye/' element={<Home theme={theme}></Home>}></Route>
+          <Route path='/deep-eye/' element={<Home tema={tema}></Home>}></Route>
           <Route path='/deep-eye/sobre/'></Route>
           <Route path='/deep-eye/psicodelicos/' element={<Psicodelicos></Psicodelicos>}></Route>
-          <Route path='/deep-eye/tienda/' element={<Tienda theme={theme}></Tienda>}></Route>
+          <Route path='/deep-eye/tienda/' element={<Tienda tema={tema}></Tienda>}></Route>
 
           {psicodelicos.map(psicodelico => (
-            <Route path={`/Deep-eye/psicodelicos/${psicodelico.url}`} element={ <ViewPsicodelicos 
-            id={psicodelico.id}/>}></Route>
+            <Route path={`/deep-eye/psicodelicos/${psicodelico.url}`} element={ <ViewPsicodelicos 
+            id={psicodelico.id} tema={tema}/>} ></Route>
           ))}
 
 

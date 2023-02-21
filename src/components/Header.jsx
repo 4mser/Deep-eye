@@ -15,7 +15,7 @@ import {RxMoon} from 'react-icons/rx'
 
 
 
-const Header = ({ onThemeChange, theme }) => {
+const Header = ({ onTemaChange, tema }) => {
 
     const location = useLocation();
 
@@ -102,7 +102,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
             <header className={`header ${isScrolled ? 'scrolled' : ''}`}>
                 
                 <Link to='/deep-eye/'>
-                    <div className={theme=== 'dark' ? 'logo-dark' : 'logo-light'}>
+                    <div className={tema=== 'dark' ? 'logo-dark' : 'logo-light'}>
                         <img src="https://s3.amazonaws.com/skybar.database.teset.1/DELOGO-10.png" alt=""/>
                     </div>
                 </Link>
@@ -112,7 +112,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
 
                     <div className={`bg-sections ${isMenuOpen ? 'active' : ''}`} onClick={handleSections}></div>
 
-                    <ul className={`nav ${theme === 'dark' ? 'dark' : 'light'}`}>
+                    <ul className={`nav ${tema === 'dark' ? 'dark' : 'light'}`}>
 
                         <li>
                             <Link to='/deep-eye/' onClick={handleClick}> 
@@ -227,10 +227,10 @@ const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
 
 
                 <div className='header-icons'>
-                    {theme === 'light' ? (
-                        <HiSun className="theme-light" onClick={onThemeChange} />
+                    {tema === 'light' ? (
+                        <HiSun className="theme-light" onClick={onTemaChange} />
                     ) : (
-                        <MdNightlight className="theme-dark" onClick={onThemeChange} />
+                        <MdNightlight className="theme-dark" onClick={onTemaChange} />
                     )}
 
                     <div className={`menu-btn ${isOpen ? 'open' : ''}`}  onClick={handleClick}>

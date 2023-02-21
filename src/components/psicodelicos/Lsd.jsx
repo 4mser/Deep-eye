@@ -1,14 +1,13 @@
 import { useState } from 'react';
 
-/* import GraficoConsumo from "../../compoments/graficos/GraficoConsumo.jsx";
-import GraficosUsuarios from "../../compoments/graficos/GraficosUsuarios.jsx"; */
 import { GiTongue, GiBookmarklet, GiKitchenScale, GiAbstract089 } from "react-icons/gi";
 import { MdPsychology } from "react-icons/md";
 
 import psicodelicos from '../../data-base/PsicodelicosData.jsx';
+import GraficoConsumo from '../graficos/GraficoConsumo.jsx';
 
 
-const Lsd = () => {
+const Lsd = ({tema}) => {
 
     const [showHistoria, setShowHistoria] = useState(false);
     const [showDosificacion, setShowDosificacion] = useState(false);
@@ -38,8 +37,7 @@ const Lsd = () => {
                             <div className="consumo"  style={{ display: showConsumo ? 'block' : 'none' }}>
                                 <article className="aside-data">
                                     <div className="data-consumo">
-                                        {/* <GraficoConsumo></GraficoConsumo> */}
-
+                                        <GraficoConsumo tema={tema}></GraficoConsumo>
                                     </div>   
                                 </article>
                             </div>

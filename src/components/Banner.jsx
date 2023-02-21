@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-const Banner = ({theme}) => {
+const Banner = ({tema}) => {
 
 
   const sensitivity = window.innerWidth > 1000 ? { x: 10, y: 10 } : { x: 50, y: 50 };
@@ -49,7 +49,7 @@ const Banner = ({theme}) => {
       <section className="banner-container">
 
 
-        <div className={theme === "dark" ? "banner-dark" : "banner-light"}>
+        <div className={tema === "dark" ? "banner-dark" : "banner-light"}>
 
           <img
             src="https://s3.amazonaws.com/skybar.database.teset.1/imgBanner-02.png"
@@ -57,7 +57,7 @@ const Banner = ({theme}) => {
             border="0"
           />
 
-          <div className={theme === "dark" ? "banner-eye-dark" : "banner-eye-light"}
+          <div className={tema === "dark" ? "banner-eye-dark" : "banner-eye-light"}
           style={innerWidth> 1000? {
             transform: `translate(${limitedX}%, ${limitedY}%)`,
             transition: "transform .1s ease-out"} : {
@@ -68,7 +68,7 @@ const Banner = ({theme}) => {
         </div>
 
 
-        <div className={theme === 'dark' ? 'title-banner-dark' : 'title-banner-light'}>
+        <div className={tema === 'dark' ? 'title-banner-dark' : 'title-banner-light'}>
           <h1></h1>
         </div>
 

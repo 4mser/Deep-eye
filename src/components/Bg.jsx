@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const Bg = ( { theme } )=> {
+const Bg = ( { tema } )=> {
   const videoRef = React.useRef(null);
   useEffect(() => {
     videoRef.current.play();
@@ -48,8 +48,8 @@ const Bg = ( { theme } )=> {
     limitedY = Math.min(Math.max(y, -25), 25);
 
     return (
-        <div className={theme === 'light' ? 'bg light' : 'bg dark'}>
-           <video  className={theme === 'light' ? 'bg-video light' : 'bg-video dark'}
+        <div className={tema === 'light' ? 'bg light' : 'bg dark'}>
+           <video  className={tema === 'light' ? 'bg-video light' : 'bg-video dark'}
                     ref={videoRef} loop muted playsInline style={{
                     transform: `translate(${-limitedX}%, ${-limitedY}%)`,
                     transition: "transform 0.1s ease-out",

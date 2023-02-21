@@ -15,7 +15,7 @@ const PsicoCards = () => {
         <div className="container-psicodelicos" >
             {psicodelicos.map(psicodelico => (
             <div key={psicodelico.id} className="psicodelico2" >
-                <Link className='links-router' to={`/Deep-eye/psicodelicos/${psicodelico.url}`}>
+                <Link className='links-router' to={`/deep-eye/psicodelicos/${psicodelico.url}`}>
                     <div className="psicodelico-img2">
                         <img src={psicodelico.image} alt="Psychedelic-image" />
                         <p>{psicodelico.peligro}</p>

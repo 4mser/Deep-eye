@@ -2,14 +2,14 @@ import Lsd from "./Lsd"
 import TripsUsers from "../TripsUsers"
 
 
-const ViewPsicodelicos = ({id}) => {
+const ViewPsicodelicos = ({id, tema}) => {
 
     
 
     return (
         <section className="psychedelics-sections">
             <section className="info-sustancias">
-                {id===1 ? <Lsd></Lsd> : null}
+                {id===1 ? <Lsd tema={tema}></Lsd> : null}
 
             </section>
 
