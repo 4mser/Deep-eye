@@ -5,9 +5,15 @@ const Home = ({theme}) => {
         <section>
             <Banner theme={theme}></Banner>
             <div className="about">
-                <h2>Somos una plataforma dedicada a la investigación y reflexión sobre la mente humana y los estados no-ordinarios de conciencia. <br /> <br />
+                <h2>Nuestra plataforma se dedica a la investigación y reflexión sobre la mente humana y sus estados no-ordinarios de conciencia. Nos esforzamos por comprender cómo estos estados han estado involucrados en la evolución de la conciencia humana, analizando datos de las experiencias otorgadas por nuestros usuarios.
 
-                Nuestro objetivo es proporcionar información rigurosa y promover el conocimiento sobre el uso de sustancias psicoactivas, con el fin de reducir los riesgos asociados al uso indebido de estos compuestos e investigar sus usos terapéuticos y de desarrollo humano.</h2>
+                <br /><br />
+
+                Como parte de nuestro compromiso con la rigurosidad, promovemos el conocimiento sobre el uso de sustancias psicoactivas, y abogamos por reducir los riesgos asociados al uso indebido de estos compuestos, mientras investigamos sus posibles usos terapéuticos y de desarrollo humano.
+
+                <br /><br />
+
+                Nuestra plataforma está enfocada en proporcionar información precisa y confiable sobre estos temas, a través de investigaciones rigurosas y una comunicación transparente y responsable. Nos preocupamos profundamente por la salud y el bienestar de nuestros usuarios, y estamos comprometidos en hacer nuestra contribución al avance de la comprensión de la mente humana de manera ética y legal. </h2>
 
 
             </div>

@@ -19,19 +19,18 @@
   --blue: #00E5FF;
 
 
-  background-color: black;
-
 
 
 }
 
 .light {
   --primary-color: white;
-  --secondary-color: #232323;
+  --secondary-color: #101010;
+
+  --borde-psicards: rgba(255, 255, 255, 0.589);
 
   --shadow: rgba(255, 255, 255, 0.168);
 
-  background-color: var(--secondary-color);
 }
 
 .dark {
@@ -40,7 +39,9 @@
 
   --primary-color: #1d1d1d;
   --secondary-color: white;
-  background-color: var(--secondary-color);
+
+  --borde-psicards: rgba(3, 3, 3, 0.683);
+
 
 }
 

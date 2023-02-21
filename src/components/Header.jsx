@@ -25,7 +25,7 @@ const Header = ({ onThemeChange, theme }) => {
 
 
 
-const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
+const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
 
   const [position, setPosition] = useState({ x: 0 });
 
@@ -116,7 +116,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                             <Link to='/deep-eye/'> 
                                 <div className="icon-p">
                                     {iconoInicio}
-                                    <p>INICIO</p>
+                                    <p>Inicio</p>
                                 </div>
                             </Link>
                         </li>
@@ -125,7 +125,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                             <Link to='/deep-eye/sobre/'>
                                 <div className="icon-p">
                                     {iconoSobre} 
-                                    <p>SOBRE</p>
+                                    <p>Sobre</p>
                                 </div> 
                             </Link>
                         </li>
@@ -142,7 +142,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
 
                                 
 
-                                <p>SECCIONES <span className='arrow-sections'>▼</span></p>
+                                <p>Secciones <span className='arrow-sections'>▼</span></p>
                                 
                             </div>
 
@@ -199,6 +199,15 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                                     </li>
                                 </Link>
 
+                                <Link to='/deep-eye/arte/'>
+                                    <li>
+                                        <p>Contenido recomendado</p>  
+                                        <img src="https://s3.amazonaws.com/skybar.database.teset.1/pretty-book-bench-nature-water-outdoors-animated-gif.gif" alt="" />
+                                    </li>
+                                </Link>
+
+
+
 
                             </ul>
                         </li>
@@ -207,7 +216,7 @@ const sensitivity = window.innerWidth > 1000 ? { x: 135} : { x: 10000};
                             <Link to='/deep-eye/tienda/'> 
                                 <div className="icon-p">
                                     {iconoTienda}
-                                    <p>TIENDA</p>
+                                    <p>Tienda</p>
                                 </div>
                             </Link>
                         </li>
