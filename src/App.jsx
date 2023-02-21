@@ -14,6 +14,10 @@ import Psicodelicos from './routes/Psicodelicos';
 
 function App() {
 
+  window.onbeforeunload = function () {
+    location.replace('/deep-eye/');
+  }
+
   const [theme, setTheme] = useState('dark');
 
   const handleThemeChange = () => {
