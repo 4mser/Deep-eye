@@ -55,13 +55,13 @@ const PsicoCards = () => {
     return (
         <div className="container-psicodelicos" >
             {psicodelicos.map(psicodelico => (
-            <div key={psicodelico.id} className="psicodelico2" style={{
-                transform: `translate(${limitedX}%, ${-limitedY}%)`,
-                transition: "transform 0.1s ease-out",
-                }}>
+            <div key={psicodelico.id} className="psicodelico2" >
                 <Link className='links-router' to={`/Deep-eye/psicodelicos/${psicodelico.url}`}>
                     <div className="psicodelico-img2">
-                        <img src={psicodelico.image} alt="Psychedelic-image" />
+                        <img src={psicodelico.image} alt="Psychedelic-image" style={{
+                transform: `translate(${limitedX}%, ${-limitedY}%)`,
+                transition: "transform 0.1s ease-out",
+                }}/>
                         <p>{psicodelico.peligro}</p>
                     </div>
                     
