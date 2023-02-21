@@ -13,6 +13,7 @@ import Psicodelicos from './routes/Psicodelicos';
 import psicodelicos from './data-base/PsicodelicosData';
 import ViewPsicodelicos from './components/psicodelicos/ViewPsicodelicos';
 import Lsd from './components/psicodelicos/Lsd';
+import About from './routes/About';
 
 
 function App() {
@@ -39,7 +40,7 @@ function App() {
 
         <Routes>
           <Route path='/deep-eye/' element={<Home tema={tema}></Home>}></Route>
-          <Route path='/deep-eye/sobre/'></Route>
+          <Route path='/deep-eye/sobre/' element={<About></About>}></Route>
           <Route path='/deep-eye/psicodelicos/' element={<Psicodelicos></Psicodelicos>}></Route>
           <Route path='/deep-eye/tienda/' element={<Tienda tema={tema}></Tienda>}></Route>
 
