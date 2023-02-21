@@ -222,8 +222,10 @@ const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
                                 </div>
                             </Link> */}
                             <a href="https://imminent-bandicoot-de3.notion.site/Tienda-052cb9b6a19341bcac3a5ddb0f7c8bfb" target='_blank'>
-                                {iconoTienda}
-                                <p>Tienda</p>
+                                <div className='icon-p'>
+                                    {iconoTienda}
+                                    <p>Tienda</p>
+                                </div>
                             </a>
                         </li>
                     </ul>
