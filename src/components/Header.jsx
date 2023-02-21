@@ -215,12 +215,16 @@ const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
                         </li>
 
                         <li>
-                            <Link to='/deep-eye/tienda/' onClick={handleClick}> 
+                            {/* <Link to='/deep-eye/tienda/' onClick={handleClick}> 
                                 <div className="icon-p">
                                     {iconoTienda}
                                     <p>Tienda</p>
                                 </div>
-                            </Link>
+                            </Link> */}
+                            <a href="https://imminent-bandicoot-de3.notion.site/Tienda-052cb9b6a19341bcac3a5ddb0f7c8bfb" target='_blank'>
+                                {iconoTienda}
+                                <p>Tienda</p>
+                            </a>
                         </li>
                     </ul>
                 </div>
