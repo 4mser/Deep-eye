@@ -95,6 +95,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  user-select: none;
   opacity: 1;
   z-index: 999;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
@@ -1057,4 +1058,488 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 .links-router:hover .btn-psicodelicos {
   background: var(--primary-color);
   color: var(--secondary-color);
+}
+
+
+/* LSD */
+
+.psychedelics-sections {
+  padding-top: 7rem;
+  width: 100%;
+  height: auto;
+  user-select: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.info-sustancias {
+  width: 100%;
+  padding: 0 5rem;
+}
+
+.info-sustancias h1 {
+  background: rgb(190,99,208);
+  background: linear-gradient(353deg, rgba(190,99,208,1) 0%, rgba(127,167,213,1) 100%);
+  width: 15rem;
+  padding: 2rem;
+  color: white;
+  font-size: 4rem;
+  margin: 2rem 0 2rem 0;
+}
+
+.info-sustancias img {
+  width: 100%;
+}
+
+
+
+.info-sustancias h2 {
+  margin: 2rem 0 2rem 0;
+  font-size: 1.5rem;
+  color: var(--secondary-color);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  background: var(--primary-color);
+  transition: .2s;
+}
+
+
+
+.info-sustancias h2 p {
+  font-size: 2rem;
+  color: var(--secondary-color);
+
+}
+
+
+.info-sustancias p {
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: var(--primary-color);
+
+}
+
+.info-sustancias ul {
+  padding: 2rem;
+  list-style-type: disc;
+  font-weight: 500;
+  color: var(--primary-color);
+
+}
+
+
+
+.info-sustancias ul img {
+  width: 100%;
+  padding: 2rem 1rem 2rem 1rem;
+}
+
+.info-sustancias ol {
+  padding: 2rem;
+  font-weight: 700;
+  
+}
+
+.info-sustancias ol ul {
+  padding: 1rem;
+  font-weight: 500;
+  list-style-type:disc;
+}
+
+.historia {
+  display: none;
+}
+
+.dosificacion {
+  display: none;
+}
+
+.presentacion {
+  display: none;
+}
+
+.efectos {
+  display: none;
+}
+
+/* dosis */
+
+.dosis-grafica {
+  margin: 2rem 0 2rem 0;
+  width: 100%;
+  padding: 1rem;
+  border-radius: 50px;
+  background: rgb(190,99,208);
+  background: linear-gradient(266deg, rgba(190,99,208,1) 0%, rgba(127,167,213,1) 100%);
+  display: flex;
+  justify-content: space-around;
+}
+
+.dosis-grafica:hover {
+  animation: psyCard 5s ease-in-out infinite;
+
+}
+
+.baja,
+.media,
+.alta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+
+/* drug img */
+
+.drug-img-container {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.drug-img {
+  width: 100%;
+  animation: psyCard 10s ease-in-out infinite;
+}
+
+.icons-drugs-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+
+/* trips section */
+
+.trips-windows {
+  width: 80%;
+  height: 90vh;
+  overflow: hidden;
+  margin-right: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 2rem;
+}
+
+.trips-stories {
+  width: 40vw;
+  height: 80vh;
+  position: fixed;
+  border: 1px solid var(--borde-psicards);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.trips-destacados {
+  background: rgb(190,99,208);
+  background: linear-gradient(353deg, rgba(190,99,208,1) 0%, rgba(127,167,213,1) 100%);
+  width: 200%;
+  font-weight: 600;
+  display: flex;
+  justify-content: center;
+  padding: 1rem;
+  color: white;
+}
+/* users */
+
+.user-trip {
+  width: 100%;
+  height: auto;
+}
+
+.user {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+  border-radius: 50px;
+  border: 1px solid var(--borde-psicards);
+}
+
+
+
+.user-container {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  align-items: center;
+  
+}
+
+.user-container p {
+  font-weight: 600;
+  color: var(--primary-color);
+
+}
+
+.user-container p span {
+  font-weight: 400;
+}
+
+.user-image {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.user-image img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* trip */
+
+.story {
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+.story h3 {
+  margin-bottom: .5rem;
+}
+
+.btn-mostrar-story {
+  margin: 1rem 0;
+  background: none;
+  border: none;
+  padding: .2rem 0;
+  font-weight: 600;
+  cursor: pointer;
+  color: rgb(178, 131, 222);
+}
+
+.btn-mostrar-story:hover {
+  opacity: .8;
+}
+
+.grafico-user-trip {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.barra-nav-graf {
+  width: 100%;
+  height: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-radius: 50px;
+}
+
+.btn-graf-user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.btn-graf-user.active {
+  background: rgb(190,99,208);
+  background: linear-gradient(353deg, rgba(190,99,208,1) 0%, rgba(127,167,213,1) 100%);
+  color: white;
+  cursor: pointer;
+  
+}
+
+.uso-container {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.uso-container p {
+  font-weight: 500;
+}
+
+.uso-distintivo {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--moradoBtn);
+}
+
+/* Gráficos efectos */
+
+.aside-data {
+  width: 100%;
+}
+
+.data {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  gap: 2rem;
+}
+
+.data-consumo {
+  width: 100%;
+  height: auto;
+}
+
+.data h2 {
+  background: none;
+  color: white;
+  font-size: 1.3rem;
+}
+
+/* recomendaciones */
+
+.grafico h2 {
+  padding: 2rem 9rem;
+  margin-bottom: 1rem;
+  font-size: 2em;
+}
+
+.consumoGeneral {
+  width: 60%;
+  padding-left: 9rem;
+  padding-bottom: 15rem;
+}
+
+.uso-distintivo {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--blue);
+}
+
+@media (max-width: 1000px) {
+
+
+
+  .psychedelics-sections {
+    padding-top: 4.5rem;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: var(--bgColor);
+  }
+
+  .info-sustancias {
+    padding: 1rem;
+  }
+
+  .aside-data {
+    width: 100%;
+  }
+  
+  .data {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+  }
+
+  .grafic {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  
+  .data h2 {
+    background: none;
+    color: white;
+    font-size: 1.3rem;
+  }
+
+  .mixed-chart {
+    display: flex;
+    justify-items: center;
+    align-items: center;
+  }
+ 
+  /* Gráfico consumo */
+
+  .graficoConsumo {
+    width: 100%;
+  }
+
+  .trips-windows {
+    width: 100%;
+    height: auto;
+    margin-right: 2rem;
+    display: flex;
+    padding-top: 1rem;
+  }
+  
+  .trips-stories {
+    width: 100%;
+    height: 100%;
+    overflow-y: hidden;
+    position: relative;
+    border: 1px solid rgba(255, 255, 255, 0.211);
+    padding: 0 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .user-trip {
+    width: 94%;
+    height: auto;
+  }
+
+  .btn-mostrar-story {
+    cursor: none;
+  }
+
+  .btn-graf-user.active {
+    cursor: none;
+  }
+
+  .btn-graf-user {
+    cursor: none;
+  }
+
+  .grafico h2 {
+    padding: 2rem 2rem;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+  }
+  
+  .consumoGeneral {
+    width: 100%;
+    padding: 2rem;
+    margin-bottom: 4rem;
+  }
+
+  .grafico-consumo {
+    width: 100%;
+  }
 }

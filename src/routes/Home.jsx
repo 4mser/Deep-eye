@@ -14,8 +14,6 @@ const Home = ({theme}) => {
                 <br /><br />
 
                 Estamos enfocados en proporcionar información precisa y confiable sobre estos temas, a través de investigaciones rigurosas y una comunicación transparente y responsable. Nos preocupamos profundamente por la salud y el bienestar de nuestros usuarios, y estamos comprometidos en hacer nuestra contribución al avance de la comprensión de la mente humana de manera ética, legal y sin tabúes. </h2>
-
-
             </div>
         </section>
     )

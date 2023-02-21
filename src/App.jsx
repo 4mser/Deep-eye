@@ -10,13 +10,11 @@ import Home from './routes/Home';
 import Tienda from './routes/Tienda';
 import BgNoMove from './components/BgNoMove';
 import Psicodelicos from './routes/Psicodelicos';
+import psicodelicos from './data-base/PsicodelicosData';
+import ViewPsicodelicos from './components/psicodelicos/ViewPsicodelicos';
 
 
 function App() {
-
-  window.onbeforeunload = function () {
-    location.replace('/deep-eye/');
-  }
 
   const [theme, setTheme] = useState('dark');
 
@@ -43,6 +41,13 @@ function App() {
           <Route path='/deep-eye/sobre/'></Route>
           <Route path='/deep-eye/psicodelicos/' element={<Psicodelicos></Psicodelicos>}></Route>
           <Route path='/deep-eye/tienda/' element={<Tienda theme={theme}></Tienda>}></Route>
+
+          {psicodelicos.map(psicodelico => (
+            <Route path={`/Deep-eye/psicodelicos/${psicodelico.url}`} element={ <ViewPsicodelicos 
+            id={psicodelico.id}/>}></Route>
+          ))}
+
+
         </Routes>
       </BrowserRouter>
     </div>
