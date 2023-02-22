@@ -106,7 +106,7 @@
 
 .header.scrolled {
   border-bottom: 1px solid var(--shadow);
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.348);
+  box-shadow: 0 0px 10px rgba(0, 0, 0, 0.321);
   background: var(--secondary-color);
   /* transition: 1s;backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px); */
@@ -526,7 +526,7 @@
     opacity: 1;
     padding: 3rem 0;
     overflow:visible;
-    height:max-content;
+    height:14em;
   }
 
   
@@ -747,7 +747,6 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  overflow: hidden;
 }
 
 
@@ -757,7 +756,6 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .banner-dark img {
@@ -772,10 +770,10 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 .banner-light {
   width: 25vw;
   height: 25vw;
-  overflow: hidden;display: flex;
+  overflow: hidden;
+  display: flex;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
 }
 
 .banner-light img {
@@ -804,11 +802,11 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 
 
 
-.banner-eye-dark {
+
+.banner-eye-dark.animate__animated {
   width: 6vw;
   height: 6vw;
   border-radius: 50%;
-  overflow: hidden;
   /* margin: 0 2rem 3rem 0; */
   backdrop-filter: hue-rotate(170deg) invert(1);
   -webkit-backdrop-filter: hue-rotate(170deg) invert(1);
@@ -822,11 +820,11 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 
 
 
-.banner-eye-light {
+
+.banner-eye-light.animate__animated {
   width: 6vw;
   height: 6vw;
   border-radius: 50%;
-  overflow: hidden;
   backdrop-filter: hue-rotate(170deg) invert(1);
   -webkit-backdrop-filter: hue-rotate(170deg) invert(1);
   position: absolute;
@@ -839,7 +837,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 
 
 @media (max-width: 1000px) {
-  .banner-eye-light {
+  .banner-eye-light.animate__animated {
     width: 5rem;
     height: 5rem;
     overflow: hidden;
@@ -847,7 +845,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 
 
 
-  .banner-eye-dark {
+  .banner-eye-dark.animate__animated {
     width: 5rem;
     height: 5rem;
     overflow: hidden;
@@ -857,50 +855,83 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 
 /* About */
 
-.about {
+.about-container {
   width: 100%;
-  height: 100vh;
-  padding-left: 10vw;
   display: flex;
-  align-items: center;
+  margin-top: 100vh;
+  position: absolute;
+  justify-content: center;
+  align-items: flex-start;
   flex-direction: column;
+  padding: 10vw;
+  gap: 15vw;
+}
+
+.about {
+  height: 15vw;
+  overflow: hidden;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;
+  opacity: 0;
+  padding: 2rem;
+  transition: .2s ease-in-out;
 }
 
 .about h2 {
-  width: 50vw;
-  font-size: 1.5vw;
-  left: 10%;
-  top: 50%;
-  position: absolute;
-  transform: translate(-10%, -50%);
+  width: 50%;
+  font-weight: 400;
+  font-size: 1.3vw;
   line-height: 1.7vw;
   color: var(--primary-color);
-  transition: 1s;
-  padding: 1rem;
-  font-weight: 500;
+
+}
+
+.image-about {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+} 
+
+.image-about img {
+  width: 100%;
+  object-fit: cover;
 }
 
 @media (max-width: 1000px) {
-  .about {
-    height: 100vh;
-    padding: 1rem;
-    display: flex;
-    align-items: center;
-  }
-  
-  .about h2 {
-    margin-top:2rem;
 
-    width: 100%;
-    font-weight: 500;
-    font-size: .9rem;
-    line-height: 1.4rem;
-    color: var(--primary-color);
-    transition: 1s;
+  .about-container {
+    gap: 4rem;
     padding: 2rem;
   }
-}
 
+  .about {
+    height: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+  }
+
+  .about h2 {
+    width: 100%;
+    font-size: .9rem;
+    line-height: 1rem;
+  }
+
+  .image-about {
+    margin-top: 1rem;
+    width: 100%;
+  }
+
+  .about.a2 {
+    flex-direction: column-reverse;
+  }
+}
 
 
 

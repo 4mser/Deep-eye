@@ -27,7 +27,7 @@ const Header = ({ onTemaChange, tema }) => {
 
 
 
-const sensitivity = window.innerWidth > 1000 ? { x:83} : { x: 10000};
+const sensitivity = window.innerWidth > 1000 ? { x:85} : { x: 10000};
 
   const [position, setPosition] = useState({ x: 0 });
 
