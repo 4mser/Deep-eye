@@ -960,8 +960,114 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 
 /* TIENDA */
 
+.tienda {
+  width: 100%;
+  height: 100vh;
+  color: var(--secondary-color);
+}
+
+.container-productos {
+  transform: translateY(-5rem);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 3rem;
+  padding: 2rem 2rem 2rem 2rem;
+  justify-content:center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.container-productos .productos {
+  width: 25rem;
+  height: 25rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+@media (max-width: 1000px) {
+  .container-productos .productos {
+    border-bottom: 1px solid var(--borde-psicards);
+  }
+}
+
+.container-productos .productos .imagen-producto {
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  justify-content: flex-end;
+  user-select: none;
+  margin-bottom: 1rem;
+}
+
+.container-productos .productos .imagen-producto p {
+  position: absolute;
+  color: black;
+  background: yellow;
+}
+
+.container-productos .productos .imagen-producto img {
+  width: 120%;
+  height: auto;
+  object-fit: cover;
+  user-select: none;
+  transition: 1s;
+}
+
+.links-router {
+  text-decoration: none;
+  justify-content: space-between;
+  height: 100%;
+  color: var(--primary-color);
+}
+
+.links-router:hover img {
+  transform: scale(1.2);
+}
 
 
+
+
+.links-router h2 {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+  height: 3rem;
+  margin-bottom: 1rem;
+  display: flex;
+  padding-left: 1rem;
+  transition: 1s;
+  align-items: center;
+}
+
+.links-router:hover h2 {
+  background: var(--secondary-color);
+  color: var(--primary-color);
+}
+
+
+.btn-productos {
+  width: 100%;
+  height: 2rem;
+  border: 2px solid var(--primary-color);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  position: a;
+  justify-content: center;
+  color: var(--primary-color);
+  margin-top: 1rem;
+  font-weight: 600;
+  transition: .3s;
+}
+
+.links-router:hover .btn-productos {
+  background: var(--primary-color);
+  color: var(--secondary-color);
+}
 
 /* Psicodelicos */
 
