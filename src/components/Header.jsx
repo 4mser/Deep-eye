@@ -144,7 +144,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:85} : { x: 10000};
 
                                 
 
-                                <p>Secciones <span className='arrow-sections'>▼</span></p>
+                                <p className='secciones-p'>Secciones <span className='arrow-sections'>▼</span></p>
                                 
                             </div>
 
