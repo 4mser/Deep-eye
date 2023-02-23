@@ -645,6 +645,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
     left: 0;
     z-index: -1;
     display: flex;
+    top: 4.8rem;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
