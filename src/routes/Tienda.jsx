@@ -49,15 +49,13 @@ const Tienda = () => {
       limitedY = Math.min(Math.max(y, -25), 25);
 
     return (
-        <section className="seccion-psicodelicos">
-            <div className="banner-seccion-psicodelicos" >
-                <img src="https://media.tenor.com/J0nUyPxUHcwAAAAC/shut-up-take-my-money.gif" alt=""  />
-            </div>
-            <div className="titulo" >
+        <section className="tienda">
+            <div className="banner-tienda" ></div>
+            <div className="titulo-tienda" >
                 <h1 style={{
                 transform: `translate(${limitedX}%, ${limitedY}%)`,
                 transition: "transform 0.1s ease-out",
-                }}>Tienda Deep Eye</h1>
+                }}>Tienda</h1>
             </div>
             <ArticulosTienda></ArticulosTienda>
         </section>

@@ -127,7 +127,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:85} : { x: 10000};
                             <Link to='/deep-eye/sobre/' onClick={handleClick}>
                                 <div className="icon-p">
                                     {iconoSobre} 
-                                    <p>Sobre</p>
+                                    <p>Quienes somos</p>
                                 </div> 
                             </Link>
                         </li>
@@ -168,7 +168,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:85} : { x: 10000};
 
                                 <Link to='/deep-eye/psicodelicos/' onClick={handleClick}>
                                     <li id='psicodelicos'>
-                                        <p>Psicodélicos</p> 
+                                        <p>Sustancias</p> 
                                         <img src="https://s3.amazonaws.com/skybar.database.teset.1/dc7uw9n-135a4c5d-11da-47c4-8eae-d29111d07fbe.gif" alt="" />
                                     </li>
                                 </Link>
@@ -182,7 +182,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:85} : { x: 10000};
 
                                 <Link to='/deep-eye/respiracion' onClick={handleClick}>
                                     <li>
-                                        <p>Inteligencia Artificial</p>  
+                                        <p>Inteligencia Artificial & Robótica</p>  
                                         <img src="https://s3.amazonaws.com/skybar.database.teset.1/GIF3.gif" alt="" />
                                     </li>
                                 </Link>

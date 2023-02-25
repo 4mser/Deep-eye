@@ -14,16 +14,17 @@ const ArticulosTienda = () => {
         <div className="container-productos" >
             {articulostienda.map(articulo => (
             <div key={articulo.id} className="productos" >
-                <Link className='links-router' to={`/deep-eye/productos/${articulo.url}`}>
-                    <div className="imagen-producto">
+                <Link className='link-productos' to={`/deep-eye/productos/${articulo.url}`}>
+                    <div className="p-img">
                         <img src={articulo.image} alt="Psychedelic-image" />
-                        <p>{articulo.peligro}</p>
                     </div>
                     
-                    <div>
+                    <div className='p-info'>
                         <h2>{articulo.name}</h2>
+                        <p>{articulo.oferta}</p>
                         <p>{articulo.info}</p>
                     </div>
+                    
                     <div className='btn-productos'>Ver Producto</div>
                 </Link>
             </div>

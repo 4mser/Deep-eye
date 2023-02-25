@@ -98,14 +98,16 @@
   align-items: center;
   user-select: none;
   opacity: 1;
+  height: 7rem;
   z-index: 999;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.168);
-  transition: .5s;
+  transition: .3s ease;
   animation: headerAn1 forwards 1s ease-in-out;
 }
 
 .header.scrolled {
+  height: 4rem;
   border-bottom: 1px solid var(--shadow);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.321);
   background: var(--secondary-color);
@@ -113,7 +115,21 @@
   -webkit-backdrop-filter: blur(50px); */
 }
 
+.header.scrolled .logo-light img {
+  width: 6rem;
+  user-select: none;
+  transform: translateX(.7rem);
+  transition: .2s;
+}
 
+.header.scrolled .logo-dark img {
+  width: 6rem;
+  transform: translateX(.7rem);
+  user-select: none;
+  filter: invert(1) contrast(.7);
+  transition: .2s;
+
+}
 
 @media (max-width: 1000px) {
   .header {
@@ -129,15 +145,6 @@
 }
 
 
-@keyframes headerAn1 {
-  from {
-    opacity: 0;
-    height: 10rem;
-  } to {
-    height: 7rem;
-    
-  }
-}
 
 
 
@@ -218,27 +225,48 @@
   transition: .2s ease-out;
   height: 2rem;
   width: 2rem;
+  transform: translateY(.2rem);
   color: var(--primary-color);
 }
 
 .theme-light {
   transition: .2s ease-out;
   height: 2.2rem;
+  transform: translateY(.2rem);
   width: 2.2rem;
   color: var(--primary-color);
+  
 }
 
 .theme-light:hover {
   transform: scale(1.1);
   filter: drop-shadow(var(--primary-color) 0 0 2px);
+  transform: translateY(.2rem);
   cursor: pointer;
 }
 
 .theme-dark:hover {
-  transform: scale(1.1);
+  transform: translateY(.2rem) scale(1.1);
   cursor: pointer;
 }
 
+@media (max-width: 1000px) {
+  .theme-dark {
+    transform: translateY(0);
+  }
+
+  .theme-dark:hover {
+    transform: translateY(0);
+  }
+
+  .theme-light {
+    transform: translateY(0);
+  }
+
+  .theme-light:hover {
+    transform: translateY(0);
+  }
+}
 
 /* Menú btn */
 
@@ -432,6 +460,11 @@
 
 /* Nav */
 
+.header.scrolled .nav.dark,
+.header.scrolled .nav.light {
+  transform: translateY(-3rem);
+
+}
 
 .nav.dark,
 .nav.light {
@@ -442,7 +475,7 @@
   gap: 5rem;
   font-weight: 500;
   color: var(--primary-color);
-  transition: 1s;
+  transition: .3s ease;
   z-index: 999;
 }
 
@@ -962,10 +995,49 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
 /* TIENDA */
 
 .tienda {
+  padding-top: 7rem;
+  padding-bottom: 5rem;
   width: 100%;
-  height: 100vh;
-  color: var(--secondary-color);
+  height: auto;
+  user-select: none;
 }
+
+.tienda .titulo-tienda {
+  width: 100%;
+  height: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 3vw;
+  transform: translateY(-11rem);
+  padding: 2rem;
+  transition: .5s;
+}
+
+.tienda .titulo-tienda h1 {
+  color: var(--secondary-color);
+  transition: 1s;
+}
+
+@media (max-width: 1000px) {
+  .tienda .titulo-tienda {
+    font-size: 5vw;
+  }
+}
+
+.banner-tienda {
+  width: 100%;
+  height: 15rem;
+  overflow: hidden;
+  display: flex;
+  background: var(--primary-color);
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+
 
 .container-productos {
   transform: translateY(-5rem);
@@ -973,102 +1045,51 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  gap: 3rem;
-  padding: 2rem 2rem 2rem 2rem;
+  gap: 2rem;
+  padding: 1rem;
   justify-content:center;
   align-items: center;
   overflow: hidden;
 }
 
 .container-productos .productos {
-  width: 25rem;
-  height: 25rem;
-  overflow: hidden;
+  width: 12rem;
+  height: 17rem;
   display: flex;
   flex-direction: column;
 }
 
-@media (max-width: 1000px) {
-  .container-productos .productos {
-    border-bottom: 1px solid var(--borde-psicards);
-  }
-}
-
-.container-productos .productos .imagen-producto {
-  width: 100%;
-  height: 15rem;
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  justify-content: flex-end;
-  user-select: none;
-  margin-bottom: 1rem;
-}
-
-.container-productos .productos .imagen-producto p {
-  position: absolute;
-  color: black;
-  background: yellow;
-}
-
-.container-productos .productos .imagen-producto img {
-  width: 120%;
-  height: auto;
-  object-fit: cover;
-  user-select: none;
-  transition: 1s;
-}
-
-.links-router {
+.link-productos {
   text-decoration: none;
-  justify-content: space-between;
-  height: 100%;
+}
+
+
+.container-productos .productos h2 {
   color: var(--primary-color);
+  font-size: 1rem;
 }
 
-.links-router:hover img {
-  transform: scale(1.2);
-}
-
-
-
-
-.links-router h2 {
-  background: var(--primary-color);
-  color: var(--secondary-color);
-  height: 3rem;
-  margin-bottom: 1rem;
-  display: flex;
-  padding-left: 1rem;
-  transition: 1s;
-  align-items: center;
-}
-
-.links-router:hover h2 {
-  background: var(--secondary-color);
-  color: var(--primary-color);
-}
-
-
-.btn-productos {
+.p-img {
   width: 100%;
-  height: 2rem;
-  border: 2px solid var(--primary-color);
-  border-radius: 10px;
-  display: flex;
-  align-items: center;
-  position: a;
-  justify-content: center;
-  color: var(--primary-color);
-  margin-top: 1rem;
-  font-weight: 600;
-  transition: .3s;
+  border-radius: 15px;
+  box-shadow: 0 2px 8px var(--shadow);
+  margin-bottom: .7rem;
+  overflow: hidden;
+  height: 14rem;
 }
 
-.links-router:hover .btn-productos {
-  background: var(--primary-color);
-  color: var(--secondary-color);
+.p-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
+
+
+
+
+
+
+
 
 /* Psicodelicos */
 
