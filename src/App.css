@@ -102,7 +102,7 @@
   z-index: 999;
   border-bottom: 1px solid rgba(255, 255, 255, 0);
   box-shadow: 0 0px 0px rgba(0, 0, 0, 0.168);
-  transition: .3s ease;
+  transition: .3s;
   animation: headerAn1 forwards 1s ease-in-out;
 }
 
@@ -111,6 +111,7 @@
   border-bottom: 1px solid var(--shadow);
   box-shadow: 0 0px 10px rgba(0, 0, 0, 0.321);
   background: var(--secondary-color);
+  transition: .3s;
   /* transition: 1s;backdrop-filter: blur(50px);
   -webkit-backdrop-filter: blur(50px); */
 }
@@ -131,6 +132,8 @@
 
 }
 
+
+
 @media (max-width: 1000px) {
   .header {
     padding: 1rem 2rem;
@@ -142,10 +145,31 @@
     align-items: center;
     justify-content: space-between;
   }
+
+  .header.scrolled .nav {
+    transform: translateY(-3rem);
+    transition: .2s;
+  }
 }
 
 
-
+@media (min-width: 1000px) {
+  .header.scrolled .theme-dark {
+    transform: translateY(.2rem);
+  }
+  
+  .header.scrolled .theme-light {
+    transform: translateY(.2rem);
+  }
+  
+  .header.scrolled .theme-light:hover {
+    transform: scale(1.1) translateY(.2rem);
+  }
+  
+  .header.scrolled .theme-dark:hover {
+    transform: scale(1.1) translateY(.2rem);
+  }
+}
 
 
 
@@ -225,48 +249,27 @@
   transition: .2s ease-out;
   height: 2rem;
   width: 2rem;
-  transform: translateY(.2rem);
   color: var(--primary-color);
 }
 
 .theme-light {
   transition: .2s ease-out;
   height: 2.2rem;
-  transform: translateY(.2rem);
   width: 2.2rem;
   color: var(--primary-color);
-  
 }
 
 .theme-light:hover {
   transform: scale(1.1);
   filter: drop-shadow(var(--primary-color) 0 0 2px);
-  transform: translateY(.2rem);
   cursor: pointer;
 }
 
 .theme-dark:hover {
-  transform: translateY(.2rem) scale(1.1);
+  transform: scale(1.1);
   cursor: pointer;
 }
 
-@media (max-width: 1000px) {
-  .theme-dark {
-    transform: translateY(0);
-  }
-
-  .theme-dark:hover {
-    transform: translateY(0);
-  }
-
-  .theme-light {
-    transform: translateY(0);
-  }
-
-  .theme-light:hover {
-    transform: translateY(0);
-  }
-}
 
 /* Menú btn */
 
@@ -460,11 +463,6 @@
 
 /* Nav */
 
-.header.scrolled .nav.dark,
-.header.scrolled .nav.light {
-  transform: translateY(-3rem);
-
-}
 
 .nav.dark,
 .nav.light {
@@ -475,7 +473,7 @@
   gap: 5rem;
   font-weight: 500;
   color: var(--primary-color);
-  transition: .3s ease;
+  transition: .3s;
   z-index: 999;
 }
 

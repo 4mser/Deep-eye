@@ -127,7 +127,7 @@ const sensitivity = window.innerWidth > 1000 ? { x:85} : { x: 10000};
                             <Link to='/deep-eye/sobre/' onClick={handleClick}>
                                 <div className="icon-p">
                                     {iconoSobre} 
-                                    <p>Quienes somos</p>
+                                    <p>Nosotros</p>
                                 </div> 
                             </Link>
                         </li>
