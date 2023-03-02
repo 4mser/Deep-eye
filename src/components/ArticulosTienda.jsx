@@ -25,7 +25,7 @@ const ArticulosTienda = () => {
                         <p>{articulo.info}</p>
                     </div>
                     
-                    <div className='btn-productos'>Ver Producto</div>
+                    <div className='btn-productos'>$1.000</div>
                 </Link>
             </div>
             

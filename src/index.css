@@ -36,7 +36,7 @@
 
   --shadow: rgba(0, 0, 0, 0.168);
 
-  --primary-color: #1d1d1d;
+  --primary-color: #110525;
   --secondary-color: white;
 
   --borde-psicards: rgba(3, 3, 3, 0.683);
@@ -48,3 +48,4 @@
   text-decoration: none;
   color: inherit;
 }
+

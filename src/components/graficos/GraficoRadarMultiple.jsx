@@ -35,8 +35,7 @@ class GraficoRadarMultiple extends Component {
           width: 2
         },
         theme: {
-          mode: 'light', 
-          palette: 'palette1'
+          mode: this.props.tema === "dark" ? "light" : "dark",
         },
         // colors: ['#FF4560'],
         fill: {
@@ -46,7 +45,10 @@ class GraficoRadarMultiple extends Component {
           size: 0
         },
         xaxis: {
-          categories: ['Fisiológicos', 'Otros', 'Comportamiento', 'Sensorial y perceptivo', 'Cognitivos', 'Estado de ánimo']
+          categories: ['Fisiológicos', 'Otros', 'Comportamiento', 'Sensorial y perceptivo', 'Cognitivos', 'Estado de ánimo'],
+          style: {
+            colors: ['red']
+          }
         },
         yaxis: {
           tickAmount: 7,
@@ -63,6 +65,19 @@ class GraficoRadarMultiple extends Component {
       }
 
     };
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.tema !== this.props.tema) {
+      this.setState({
+        options: {
+          ...this.state.options,
+          theme: {
+            mode: this.props.tema === "dark" ? "light" : "dark"
+          }
+        }
+      });
+    }
   }
 
   render() {

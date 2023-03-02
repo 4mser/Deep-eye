@@ -18,7 +18,7 @@ class GraficoRadar extends Component {
             },
             colors: ['#7fa7d5'],
             theme: {
-              mode: 'light'
+              mode: this.props.tema === "dark" ? "light" : "dark"
             },
             tooltip: {
               y: {
@@ -50,6 +50,20 @@ class GraficoRadar extends Component {
 
     };
   }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.tema !== this.props.tema) {
+      this.setState({
+        options: {
+          ...this.state.options,
+          theme: {
+            mode: this.props.tema === "dark" ? "light" : "dark"
+          }
+        }
+      });
+    }
+  }
+
 
   render() {
     return (

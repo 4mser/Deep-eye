@@ -3,7 +3,7 @@ import GraficoRadar from "./graficos/GraficoRadar.jsx";
 
 import { useState } from "react";
 
-const TripsUsers = () => {
+const TripsUsers = ( {tema} ) => {
     const [selectedGrafico, setSelectedGrafico] = useState("generales");
     const [mostrarTextoAdicional, setMostrarTextoAdicional] = useState(false);
     return (
@@ -51,12 +51,11 @@ const TripsUsers = () => {
                             <div className="barra-nav-graf">
                                 <div className={selectedGrafico === "generales" ? "btn-graf-user active" : "btn-graf-user"}  onClick={(event) => { event.preventDefault(); setSelectedGrafico("generales") }}>Generales</div>
                                 <div className={selectedGrafico === "por_hora" ? "btn-graf-user active" : "btn-graf-user"} onClick={(event) => { event.preventDefault(); setSelectedGrafico("por_hora") }}>Por hora</div>
-                                <div className="btn-graf-user">no sé</div>
                             </div>
 
                             <div className="grafico-user-trip">
-                                {selectedGrafico === "generales" && <GraficoRadar></GraficoRadar>}
-                                {selectedGrafico === "por_hora" && <GraficoRadarMultiple></GraficoRadarMultiple>}
+                                {selectedGrafico === "generales" && <GraficoRadar tema={tema}></GraficoRadar>}
+                                {selectedGrafico === "por_hora" && <GraficoRadarMultiple tema={tema}></GraficoRadarMultiple>}
                             </div>
                         </div>
                     </div>

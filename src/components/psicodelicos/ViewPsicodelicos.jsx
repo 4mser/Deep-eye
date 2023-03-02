@@ -14,7 +14,7 @@ const ViewPsicodelicos = ({id, tema}) => {
             </section>
 
             <aside className="trips-windows">
-                <TripsUsers></TripsUsers>
+                <TripsUsers tema={tema}></TripsUsers>
             </aside> 
         </section>
     )
