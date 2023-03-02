@@ -61,6 +61,7 @@
 
 
 .bg video{
+  width: 100%;
   filter: hue-rotate(160deg);
   object-fit: cover;
 }
@@ -800,6 +801,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   display: flex;
   justify-content: center;
   flex-direction: column;
+  user-select: none;
   align-items: center;
 }
 
@@ -809,6 +811,7 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   height: 25vw;
   display: flex;
   justify-content: center;
+  user-select: none;
   align-items: center;
 }
 
@@ -828,6 +831,8 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   display: flex;
   justify-content: center;
   align-items: center;
+  user-select: none;
+
 }
 
 .banner-light img {
@@ -869,6 +874,8 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   transition: 1s;
   justify-content: center;
   align-items: center;
+  user-select: none;
+
 }
 
 
@@ -886,6 +893,8 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   justify-content: center;
   transition: 1s;
   align-items: center;
+  user-select: none;
+
 }
 
 
@@ -1737,4 +1746,3 @@ background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%
   }
 }
 
-/* Grafico radar multiple */
