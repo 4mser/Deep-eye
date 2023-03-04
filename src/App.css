@@ -61,7 +61,6 @@
 
 
 .bg video{
-  width: 100%;
   filter: hue-rotate(160deg);
   object-fit: cover;
 }
