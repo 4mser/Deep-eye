@@ -61,9 +61,8 @@ class GraficoRadarMultiple extends Component {
               }
             }
           }
-        },
+        }
       }
-
     };
   }
 

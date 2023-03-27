@@ -5,7 +5,7 @@ const Home = ({theme}) => {
     return (
         <section>
             <Banner theme={theme}></Banner>
-            <About></About>
+            {/* <About></About> */}
         </section>
     )
 }
