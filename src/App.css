@@ -643,7 +643,7 @@
     justify-content: space-around;
     padding: 1rem;
     gap: 1vw;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.4);
+    box-shadow: 0 2px 15px 0px rgba(0, 0, 0, 0.281) ;
     background: rgb(34,193,195);
 background: linear-gradient(27deg, rgb(134, 225, 227) 0%, rgb(229, 179, 249) 92%);
   }
